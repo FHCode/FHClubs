@@ -1,0 +1,111 @@
+:root {
+  --title-padding-y: 2.5rem;
+}
+
+#title{
+  padding-top: var(--title-padding-y);
+  padding-bottom: var(--title-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  #title {
+    padding-top: calc(var(--title-padding-y) * 2);
+    padding-bottom: calc(var(--title-padding-y) * 2);
+  }
+}
+
+#title p:last-child {
+  margin-bottom: 0;
+}
+
+.title-heading {
+  font-weight: 300;
+}
+
+#title .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.navbar-icon {
+  margin: auto 10px;
+  border-radius: 50%;
+}
+
+.search-box {
+  margin: 50px auto;
+}
+
+.no-url-effects, .no-url-effects:hover, .no-url-effects:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.filter-btn {
+  display: inline;
+  width: 100px;
+  margin: 20px auto;
+}
+
+.curious-btn {
+  display: inline;
+  float: right;
+  margin: 20px auto;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.title-crop { 
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}
+
+.text-crop { 
+  overflow:hidden; 
+  white-space:normal; 
+  text-overflow:ellipsis; 
+}
+
+.cut-text { 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: normal;
+}
+
+.club-text {
+  height: 5rem;
+}
+
+.hover-zoom {
+  transition: transform .2s;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05); 
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.filter-checkbox {
+  margin: 5px auto;
+}
