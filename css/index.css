@@ -69,15 +69,6 @@
 /* Card Section */
 
 .card-img {
-  height: 225px;
-  background-image: url("/club-data/club-template/img/thumbnail.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: gray;
-}
-
-.card-img-crop {
   object-fit: cover;
 }
 
