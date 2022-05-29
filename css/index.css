@@ -90,17 +90,13 @@ footer p {
   height: 5rem;
 }
 
-.card-hover {
-  outline: 0 solid pink;
-  transition: outline-width .15s linear;
+.hover-zoom {
   transition: transform .2s;
 }
 
-.card-hover:hover {
-  outline-width: 5px;
+.hover-zoom:hover {
   transform: scale(1.05); 
 }
-
 
 .unselectable {
   -moz-user-select: -moz-none;
