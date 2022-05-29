@@ -24,7 +24,8 @@
 }
 
 .title-heading {
-  font-weight: 300;
+  font-family: "Roboto";
+  font-weight: 900;
 }
 
 .search-box {
@@ -39,6 +40,14 @@
 .navbar-icon {
   margin: auto 10px;
   border-radius: 50%;
+}
+
+.navbar-home-btn {
+  transition: transform .075s linear;
+}
+
+.navbar-home-btn:hover {
+  transform: scale(1.1); 
 }
 
 /* Albumn Section */
@@ -58,6 +67,19 @@
 }
 
 /* Card Section */
+
+.card-img {
+  height: 225px;
+  background-image: url("/club-data/club-template/img/thumbnail.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: gray;
+}
+
+.card-img-crop {
+  object-fit: cover;
+}
 
 .title-crop { 
   overflow: hidden; 
