@@ -90,11 +90,14 @@ footer p {
   height: 5rem;
 }
 
-.hover-zoom {
+.card-hover {
+  outline: 0 solid pink;
+  transition: outline-width .15s linear;
   transition: transform .2s;
 }
 
-.hover-zoom:hover {
+.card-hover:hover {
+  outline-width: 5px;
   transform: scale(1.05); 
 }
 
