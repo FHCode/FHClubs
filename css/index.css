@@ -104,9 +104,12 @@
   transition: outline-width .2s linear, transform .15s linear;
 }
 
-.card-hover:hover {
-  outline-width: 5px;
-  transform: scale(1.05); 
+/* (hover animation only plays on large window size) */
+@media (min-width: 992px) {
+  .card-hover:hover {
+    outline-width: 5px;
+    transform: scale(1.05); 
+  }
 }
 
 /* Footer Section */

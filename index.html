@@ -68,7 +68,7 @@
         <div class="container py-3">
           <div class="row">
             <!-- Filter Section -->
-            <div class="col-sm-12">
+            <div>
               <button class="btn btn-outline-dark dropdown-toggle filter-btn" type="button" data-bs-toggle="collapse"
                 data-bs-target="#search-filter-dropdown" onclick="this.blur();">Filters</button>
 
@@ -76,7 +76,7 @@
                 title="Take me to a random club!">Feeling Curious?</button>
             </div>
 
-            <div class="col-sm-12 collapse" id="search-filter-dropdown">
+            <div class="collapse" id="search-filter-dropdown">
 
               <div class="container py-3">
                 <div class="row">
@@ -86,14 +86,14 @@
                     <hr>
 
                     <div class="dropdown">
-                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filter-dropdown"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Random
                       </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Random</a></li>
-                        <li><a class="dropdown-item" href="#">Alphabetical</a></li>
-                        <li><a class="dropdown-item" href="#">Member Count</a></li>
+                      <ul class="dropdown-menu" aria-labelledby="filter-dropdown">
+                        <li class="dropdown-item">Random</li>
+                        <li class="dropdown-item">Alphabetical</li>
+                        <li class="dropdown-item">Member Count</li>
                       </ul>
                     </div>
 
@@ -104,34 +104,34 @@
                     <h6>Day:</h6>
                     <hr>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="mon-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="mon-cb">
                       <label class="form-check-label unselectable" for="mon-cb">Monday</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="tues-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="tues-cb">
                       <label class="form-check-label unselectable" for="tues-cb">Tuesday</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="wed-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="wed-cb">
                       <label class="form-check-label unselectable" for="wed-cb">Wednesday</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="thur-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="thur-cb">
                       <label class="form-check-label unselectable" for="thur-cb">Thursday</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="fri-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="fri-cb">
                       <label class="form-check-label unselectable" for="fri-cb">Friday</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="date-other-cb">
-                      <label class="form-check-label unselectable" for="date-other-cb">Other</label>
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="day-other-cb">
+                      <label class="form-check-label unselectable" for="day-other-cb">Other</label>
                     </div>
 
                   </div>
@@ -140,23 +140,23 @@
                     <h6>Club Type:</h6>
                     <hr>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="aca-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="aca-cb">
                       <label class="form-check-label unselectable" for="aca-cb">Academic</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="hum-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="hum-cb">
                       <label class="form-check-label unselectable" for="hum-cb">Humanitarianism</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="soc-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="soc-cb">
                       <label class="form-check-label unselectable" for="soc-cb">Social</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="type-other-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="type-other-cb">
                       <label class="form-check-label unselectable" for="type-other-cb">Other</label>
                     </div>
 
@@ -166,30 +166,28 @@
                     <h6>Meeting Time:</h6>
                     <hr>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="lunch-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="lunch-cb">
                       <label class="form-check-label unselectable" for="lunch-cb">During Lunch</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="after-school-cb">
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="after-school-cb">
                       <label class="form-check-label unselectable" for="after-school-cb">After School</label>
                     </div>
 
-                    <div class="form-check filter-checkbox">
-                      <input class="form-check-input" type="checkbox" value="" id="time-other-cb">
-                      <label class="form-check-label unselectable" for="time-other-cb">After School</label>
+                    <div class="form-check">
+                      <input class="form-check-input filter-checkbox" type="checkbox" value="" id="time-other-cb">
+                      <label class="form-check-label unselectable" for="time-other-cb">Other</label>
                     </div>
                   </div>
                   <button type="button" class="btn btn-outline-dark btn-sm col-lg-2 col-md-4" data-bs-toggle="collapse"
-                    data-bs-target="#search-filter-dropdown">Reset Filters</button>
-
+                    data-bs-target="#search-filter-dropdown" id="reset-filter-btn">Reset Filters</button>
                 </div>
               </div>
             </div>
 
             <!-- Club Cards -->
-
 
             <div class="col-lg-4 col-md-6">
               <div class="card-hover">
@@ -252,6 +250,7 @@
 
   <!-- Custom JS -->
   <script src="./js/index.js"></script>
+  <script src="./js/filter.js"></script>
 </body>
 
 </html>
