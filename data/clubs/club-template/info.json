@@ -1,0 +1,12 @@
+{
+  "title": "[Title]",
+  "description": "[Description]",
+  "teacher" : "[teacher name]",
+  "room" : "room #",
+  "trailer" : "",
+  "carousel" : [
+    "./img1.png",
+    "www.site.com/img2.png"
+  ],
+  "calendar" : ""
+}

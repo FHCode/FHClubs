@@ -32,6 +32,7 @@ const resetFilters = () => {
     $("#filter-dropdown").text("Random");
 }
 
+// ? Could be optimized by optional param, which would tell function which property has been changed.
 const updateFilterSettings = () => {
     currentSettings = {
         // Sort by
@@ -69,7 +70,6 @@ $("#reset-filter-btn").click(function() {
 });
 
 $(".filter-checkbox").click(function() {
-    console.log($(this).prop("checked"));
     updateFilterSettings();
 });
 
