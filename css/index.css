@@ -28,27 +28,13 @@
   font-weight: 900;
 }
 
-.search-box {
+#search-box {
   margin: 50px auto;
   height: 45px;
   max-width: 40rem;
 }
 
-/* Navbar */
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
-.navbar-icon {
-  margin: auto 10px;
-  border-radius: 50%;
-}
-
-.navbar-home-btn {
-  transition: transform .075s linear;
-}
-
-.navbar-home-btn:hover {
-  transform: scale(1.1); 
-}
 
 /* Filter Section */
 
@@ -104,6 +90,10 @@
   transition: outline-width .2s linear, transform .15s linear;
 }
 
+.box-shadow-light { 
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15);
+}
+
 /* (hover animation only plays on large window size) */
 @media (min-width: 992px) {
   .card-hover:hover {
@@ -112,16 +102,6 @@
   }
 }
 
-/* Footer Section */
-
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
 
 /* Miscellaneous */
 
@@ -130,10 +110,6 @@ footer p {
   text-decoration: none;
 }
 
-.unselectable {
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+#club-cards {
+  min-height: 300px;
 }

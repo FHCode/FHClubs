@@ -1,0 +1,66 @@
+:root {
+    --title-padding-y: 2.5rem;
+}
+  
+/* Title Section */
+  
+#title{
+    padding-top: var(--title-padding-y);
+    padding-bottom: var(--title-padding-y);
+    margin-bottom: 0;
+    background-color: lightblue;
+    background-image: url("/img/space.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+@media (min-width: 768px) {
+    #title {
+        padding-top: calc(var(--title-padding-y) * 2);
+        padding-bottom: calc(var(--title-padding-y) * 2);
+    }
+}
+
+.club-title {
+    font-family: "Roboto";
+    font-weight: 900;
+    color: white;
+    font-size: 50px;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, .35);
+}
+
+#connect-btn {
+    margin: 50px auto;
+}
+
+/* Info section */
+
+#club-info {
+    background-color: bisque;
+    text-align: center;
+}
+
+.club-info-icon {
+    font-size: 50px;
+    margin: auto 30px;
+}
+
+
+/* Filter Section */
+
+.filter-btn {
+    width: 100px;
+    margin: 20px auto;
+}
+
+.curious-btn {
+    float: right;
+    margin: 20px auto;
+}
+
+.filter-checkbox {
+    margin: 5px auto;
+}
+

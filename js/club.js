@@ -1,4 +1,5 @@
 // returns a dictionary of HTTP parameters & values
+
 const getHttpParam = () => {
   const siteUrl = window.location.href;
   const paramStartPos = siteUrl.indexOf("?");
@@ -22,6 +23,8 @@ const getHttpParam = () => {
   return result;
 }
 
+const httpParams = getHttpParam();
+
 function pathExists(url, callback){
   jQuery.ajax({
     type: 'HEAD',
@@ -31,17 +34,16 @@ function pathExists(url, callback){
   });
 }
 
-// Get Json
-jQuery.getJSON("./info.json", data => {
-    console.log(data);
+$(document).ready(() => {
+  console.log(httpParams);
 });
 
-// get club list
-jQuery.get("./data/club-list", data => {
-    const clubList = data.split("\r\n");
-    console.log(clubList);
-});
+// // Get Json
+// jQuery.getJSON("./info.json", data => {
+//     console.log(data);
+// });
 
-pathExists("./data/clubs/coding", (result) => {
-    console.log("res: " + result);
-});
+// // Checks if a folder exists
+// pathExists("./data/clubs/coding", (result) => {
+//     console.log("res: " + result);
+// });

@@ -1,0 +1,48 @@
+/* Navbar */
+
+.navbar-icon {
+    margin: auto 10px;
+    border-radius: 50%;
+}
+
+.navbar-home-btn {
+    transition: transform .075s linear;
+}
+
+.navbar-home-btn:hover {
+    transform: scale(1.1); 
+}
+
+
+/* Footer Section */
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+.footer-href, .footer-href:hover, .footer-href:visited {
+    color: black;
+}
+
+.footer-href:hover {
+    text-decoration: none;
+}
+
+/* Miscellaneous */
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+    display: none;
+}
