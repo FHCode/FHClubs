@@ -25,15 +25,6 @@ const getHttpParam = () => {
 
 const httpParams = getHttpParam();
 
-function pathExists(url, callback){
-  jQuery.ajax({
-    type: 'HEAD',
-    url: url,
-    success: () => callback(true),
-    error: () => callback(false)
-  });
-}
-
 $(document).ready(() => {
   console.log(httpParams);
 });
