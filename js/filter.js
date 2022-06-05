@@ -60,7 +60,7 @@ $(".filter-checkbox").click(function() {
 });
 
 // get club list
-$.get("./data/club-list", data => {
+$.get("./data/club-list", data => { 
     fullClubListAlphabetical = data.split("\n");
     fullClubList = randomizedList(fullClubListAlphabetical);
     listClubs(fullClubList);
@@ -114,7 +114,7 @@ const listClubs = (clubs) => {
 const fillCard = (
     card, 
     title = "Club Title",
-    href = "/club.html?q=unknown",
+    href = "./club.html?q=unknown",
     description = lorem,
     src = "./data/clubs/club-template/img/thumbnail0.png"
 ) => {
