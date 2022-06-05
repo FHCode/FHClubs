@@ -61,7 +61,7 @@ $(".filter-checkbox").click(function() {
 
 // get club list
 $.get("./data/club-list", data => {
-    fullClubListAlphabetical = data.split("\r\n");
+    fullClubListAlphabetical = data.split("\n");
     fullClubList = randomizedList(fullClubListAlphabetical);
     listClubs(fullClubList);
 });
