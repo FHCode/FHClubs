@@ -31,9 +31,10 @@ body {
   height: 32rem;
 }
 
-#carousel-title {
+#club-title {
   padding-top: var(--title-padding-y);
   padding-bottom: var(--title-padding-y);
+  font-size: 4.5rem;
 }
 
 .carousel-image {

@@ -3,10 +3,13 @@
   "description": "[Description]",
   "teacher" : "[teacher name]",
   "room" : "room #",
-  "trailer" : "",
   "carousel" : [
     "./img1.png",
     "www.site.com/img2.png"
   ],
+  "purpose" : "purpose of club",
+  "what-we-do": "blah blah", 
+  "why-you-should-join": "",
+  "Schedule" : "description",
   "calendar" : ""
 }
