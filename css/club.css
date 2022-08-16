@@ -145,3 +145,6 @@ body {
   color: #aaa;
 }
 
+.modal-dialog {
+  top: 20%;
+}
