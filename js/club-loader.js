@@ -63,6 +63,20 @@ const generateCarouselBtns = (imgArr) => {
   return result;
 }
 
+const loadSocials = (data) => {
+  if(data.socials.instagram) {
+    $("#insta-icon").wrap(`<a href="${data.socials.instagram}" target="_blank">`).addClass("has-link");
+  }
+
+  if(data.socials.teams) {
+    $("#teams-icon").wrap(`<a href="${data.socials.teams}" target="_blank">`).addClass("has-link");
+  }
+
+  if(data.socials.discord) {
+    $("#discord-icon").wrap(`<a href="${data.socials.discord}" target="_blank">`).addClass("has-link");
+  }
+}
+
 const insertClubInfo = (data) => {
   $("#club-title").text(data.title);
   $("#room-num").text(data.room);
@@ -72,6 +86,7 @@ const insertClubInfo = (data) => {
   $("#car-indicator-cont").html(generateCarouselBtns(data.carousel));
   $("#purpose-para").text(data.purpose);
   $("#typical-para").text(data.typicalWeek);
+  loadSocials(data);
 }
 
 // Get Data Json File
@@ -80,5 +95,5 @@ jQuery.getJSON(`./data/clubs/${CLUB}/info.json`, data => {
   insertClubInfo(data);
 })
 .fail( () => {
-  console.log("club doesnt exist!");
+  $("#club-title").text("Sorry, this club doesn't exist!");
 });

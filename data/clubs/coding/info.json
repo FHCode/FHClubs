@@ -11,7 +11,7 @@
   "typicalWeek": "(A paragraph that describes what happens during meetings.)", 
   "schedule" : "some sentences that informs the meeting times",
   "socials" : {
-    "instagram" : "link",
+    "instagram" : "https://www.instagram.com/fh_coding_club/?hl=en",
     "discord" : "link",
     "teams" : "link"
   }

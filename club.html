@@ -31,6 +31,40 @@
    
   <div id="header-container"></div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="socialsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row social-icon-container">
+            
+            <div class="col-lg-4">
+              <i class="bi bi-instagram icon-lg" id="insta-icon"></i>
+            </div>
+            
+            <div class="col-lg-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="100%" fill="currentColor" class="bi bi-microsoft-teams" id="teams-icon" viewBox="0 0 16 16">
+                <path d="M9.186 4.797a2.42 2.42 0 1 0-2.86-2.448h1.178c.929 0 1.682.753 1.682 1.682v.766Zm-4.295 7.738h2.613c.929 0 1.682-.753 1.682-1.682V5.58h2.783a.7.7 0 0 1 .682.716v4.294a4.197 4.197 0 0 1-4.093 4.293c-1.618-.04-3-.99-3.667-2.35Zm10.737-9.372a1.674 1.674 0 1 1-3.349 0 1.674 1.674 0 0 1 3.349 0Zm-2.238 9.488c-.04 0-.08 0-.12-.002a5.19 5.19 0 0 0 .381-2.07V6.306a1.692 1.692 0 0 0-.15-.725h1.792c.39 0 .707.317.707.707v3.765a2.598 2.598 0 0 1-2.598 2.598h-.013Z"/>
+                <path d="M.682 3.349h6.822c.377 0 .682.305.682.682v6.822a.682.682 0 0 1-.682.682H.682A.682.682 0 0 1 0 10.853V4.03c0-.377.305-.682.682-.682Zm5.206 2.596v-.72h-3.59v.72h1.357V9.66h.87V5.945h1.363Z"/>
+              </svg>
+            </div>
+            
+            <div class="col-lg-4">
+              <i class="bi bi-discord icon-lg" id="discord-icon"></i>
+            </div>
+          </div>
+          
+        </div>
+        <div class="modal-footer border-top-0">
+          <button type="button" class="btn btn-lg btn-dark w-100 mx-0" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <main>
 
   <div id="club-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -91,8 +125,7 @@
         <i class="bi bi-qr-code icon-lg"></i>
 
         <h2 class="fw-normal">Socials</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-warning" href="#">Connect</a></p>
+        <p><a class="btn btn-lg btn-warning" id="socials-btn" data-bs-toggle="modal" data-bs-target="#socialsModal">Connect</a></p>
       </div>
     
       <div class="col-lg-4">
@@ -104,7 +137,6 @@
       </div>
     </div>
 
-
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
@@ -115,7 +147,7 @@
         <p class="lead" id="purpose-para">A paragraph that describes the purpose of your club.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">IMG</text></svg>
+        <div class="square-placeholder"></div>
       </div>
     </div>
 
@@ -127,8 +159,7 @@
         <p class="lead" id="typical-para">Describe what ususally happens during your club meetings</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">IMG</text></svg>
-
+        <div class="square-placeholder"></div>
       </div>
     </div>
 
@@ -136,7 +167,7 @@
 
     <!-- /END THE FEATURETTES -->
 
-  </div><!-- /.container -->
+  </div>
 
 </main>
 
