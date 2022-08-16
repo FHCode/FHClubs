@@ -3,7 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 :root {
-  --title-padding-y: 2.5rem;
+  --title-padding-y: 5rem;
 }
 
 
@@ -32,9 +32,13 @@ body {
 }
 
 #club-title {
-  padding-top: var(--title-padding-y);
-  padding-bottom: var(--title-padding-y);
   font-size: 4.5rem;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+  
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 
 .carousel-image {
@@ -111,3 +115,9 @@ body {
 }
 
 .icon-lg {font-size: 4rem;}
+
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+}
