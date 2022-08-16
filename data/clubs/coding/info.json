@@ -1,6 +1,18 @@
 {
   "title": "Coding Club",
-  "description": "blah blah",
   "teacher" : "Ms. Li",
-  "room" : "103"
+  "room" : "103",
+  "carousel" : [
+    "./data/clubs/template/img/slides/1.png",
+    "./data/clubs/template/img/slides/2.png",
+    "./data/clubs/template/img/slides/3.png"
+  ],
+  "purpose" : "(A paragraph that describes the purpose of your club.)",
+  "typicalWeek": "(A paragraph that describes what happens during meetings.)", 
+  "schedule" : "some sentences that informs the meeting times",
+  "socials" : {
+    "instagram" : "link",
+    "discord" : "link",
+    "teams" : "link"
+  }
 }

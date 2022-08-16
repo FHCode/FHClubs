@@ -1,15 +1,19 @@
 {
-  "title": "[Title]",
-  "description": "[Description]",
+  "title": "[Club Name]",
   "teacher" : "[teacher name]",
-  "room" : "room #",
+  "room" : "[room #]",
   "carousel" : [
-    "./img1.png",
-    "www.site.com/img2.png"
+    "./data/clubs/template/img/slides/1.png",
+    "./data/clubs/template/img/slides/2.png",
+    "./data/clubs/template/img/slides/3.png"
   ],
-  "purpose" : "purpose of club",
-  "what-we-do": "blah blah", 
-  "why-you-should-join": "",
-  "Schedule" : "description",
-  "calendar" : ""
+  "purpose" : "(A paragraph that describes the purpose of your club.)",
+  "typicalWeek": "(A paragraph that describes what happens during meetings.)", 
+  "schedule" : "some sentences that informs the meeting times",
+  "primaryColor" : "#000",
+  "socials" : {
+    "instagram" : "link",
+    "discord" : "link",
+    "teams" : "link"
+  }
 }

@@ -33,16 +33,15 @@
 
 <main>
 
-  <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <div id="club-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators" id="car-indicator-cont">
+      <button type="button" data-bs-target="#club-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#club-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#club-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner" id="club-imgs-container">
 
       <div class="carousel-item active">
-        <img class="d-block w-100 carousel-image" src="./img/space.jpg" width="100%" height="100%">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
       </div>
 
@@ -62,12 +61,12 @@
     </div>
 
     <!-- Carousel Buttons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#club-carousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#club-carousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -84,8 +83,8 @@
       <div class="col-lg-4">
         <i class="bi bi-door-open icon-lg"></i>
 
-        <h2 class="fw-normal">Room #</h2>
-        <p>(teacher's name)'s room</p>
+        <h2 class="fw-normal">Room <span id="room-num">#</span></h2>
+        <p><span id="teachers-name">(teacher's name)</span>'s room</p>
       </div>
 
       <div class="col-lg-4">
@@ -100,7 +99,7 @@
         <i class="bi bi-clock icon-lg"></i>
 
         <h2 class="fw-normal">Schedule</h2>
-        <p>A short paragraph describing the club's usual schedule.</p>
+        <p id="schedule-desc">A short paragraph describing the club's usual schedule.</p>
         <p><a class="btn btn-secondary" href="#">View details</a></p>
       </div>
     </div>
@@ -124,23 +123,10 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">What We Do</h2>
-        <p class="lead">Describe what ususally happens during your club meetings</p>
+        <h2 class="featurette-heading fw-normal lh-1">Typical Meeting</h2>
+        <p class="lead" id="typical-para">Describe what ususally happens during your club meetings</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">IMG</text></svg>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Why You Should Join</h2>
-        <p class="lead">There are dozens of clubs at Fraser Heights. Tell people what makes your club awesome!</p>
-      </div>
-      <div class="col-md-5">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">IMG</text></svg>
 
       </div>
