@@ -116,7 +116,7 @@ const fillCard = (
     title = "Club Title",
     href = "./club.html?q=unknown",
     description = lorem,
-    src = "./data/clubs/club-template/img/thumbnail0.png"
+    src = "./data/clubs/template/img/thumbnail0.png"
 ) => {
     card.innerHTML = `<div class="card-hover"> <a href="${href}" class="no-url-effects"> <div class="card mb-4 box-shadow-light"> <!-- <div class="card-img"></div> --> <img class="card-img" src="${src}" alt="-"> <div class="card-body"> <h4 class="club-title title-crop">${title}</h4> <p class="club-text text-muted text-crop"> ${description} </p> </div> </div> </a> </div>`;
 }
