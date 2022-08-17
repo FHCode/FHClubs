@@ -7,10 +7,10 @@
     "./data/clubs/template/img/slides/2.png",
     "./data/clubs/template/img/slides/3.png"
   ],
-  "purpose" : "(A paragraph that describes the purpose of your club.)",
-  "typicalWeek": "(A paragraph that describes what happens during meetings.)", 
+  "purpose" : "Describe the purpose of your club.",
+  "typicalWeek": "Describe that typeically happens during meetings.", 
   "schedule" : "some sentences that informs the meeting times",
-  "primaryColor" : "#000",
+  "color" : "#000",
   "socials" : {
     "instagram" : "",
     "discord" : "",

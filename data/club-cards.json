@@ -1,0 +1,78 @@
+{
+    "Coding Club" : {
+        "link" : "coding",
+        "thumbnail" : "https://raw.githubusercontent.com/brhzhou/kirby-site/master/img/kirby-mario.jpg",
+        "desc" : "this is a template for a description",
+        "mon": false,
+        "tues": true,
+        "wed": true,
+        "thur": false,
+        "fri": false,
+        "dayOther": true,
+        "academic": true,
+        "human": false,
+        "social": false,
+        "clubTypeOther": false,
+        "lunch": true,
+        "afterSchool": false,
+        "meetingTimeOther": false    
+    },
+
+    "Template" : {
+        "link" : "template",
+        "thumbnail" : "",
+        "desc" : "this is a template for a description",
+        "mon": false,
+        "tues": false,
+        "wed": true,
+        "thur": false,
+        "fri": false,
+        "dayOther": true,
+        "academic": true,
+        "human": false,
+        "social": false,
+        "clubTypeOther": false,
+        "lunch": true,
+        "afterSchool": false,
+        "meetingTimeOther": false    
+    },
+
+    "Coding Club2" : {
+        "link" : "coding",
+        "thumbnail" : "https://raw.githubusercontent.com/brhzhou/kirby-site/master/img/kirby-mario.jpg",
+        "desc" : "this is a template for a description",
+        "mon": false,
+        "tues": false,
+        "wed": true,
+        "thur": false,
+        "fri": false,
+        "dayOther": true,
+        "academic": true,
+        "human": false,
+        "social": false,
+        "clubTypeOther": false,
+        "lunch": true,
+        "afterSchool": false,
+        "meetingTimeOther": false    
+    },
+
+
+    "Template2" : {
+        "link" : "template",
+        "thumbnail" : "",
+        "desc" : "this is a template for a description",
+        "mon": true,
+        "tues": true,
+        "wed": true,
+        "thur": true,
+        "fri": true,
+        "dayOther": true,
+        "academic": true,
+        "human": true,
+        "social": true,
+        "clubTypeOther": true,
+        "lunch": true,
+        "afterSchool": true,
+        "meetingTimeOther": true    
+    }
+}

@@ -17,31 +17,38 @@ const resetFilters = () => {
     $("#filter-dropdown").text("Random");
 
     updateFilterSettings();
-    
     sortClubList("Random");
+
+    _filteredClubList = CLUB_LIST;
 }
 
 // Syncs '_currentSettings' object with filters
 const updateFilterSettings = () => {
     _currentSettings = {    
         // Day
-        mon: $("#mon-cb").prop("checked"),
-        tues: $("#tues-cb").prop("checked"),
-        wed: $("#wed-cb").prop("checked"),
-        thur: $("#thur-cb").prop("checked"),
-        fri: $("#fri-cb").prop("checked"),
-        dayOther: $("#day-other-cb").prop("checked"),
+        days : {
+            mon: $("#mon-cb").prop("checked"),
+            tues: $("#tues-cb").prop("checked"),
+            wed: $("#wed-cb").prop("checked"),
+            thur: $("#thur-cb").prop("checked"),
+            fri: $("#fri-cb").prop("checked"),
+            dayOther: $("#day-other-cb").prop("checked")
+        },
     
         // Club Type
-        academic: $("#aca-cb").prop("checked"),
-        human: $("#hum-cb").prop("checked"),
-        social: $("#soc-cb").prop("checked"),
-        clubTypeOther: $("#type-other-cb").prop("checked"),
+        types : {
+            academic: $("#aca-cb").prop("checked"),
+            human: $("#hum-cb").prop("checked"),
+            social: $("#soc-cb").prop("checked"),
+            clubTypeOther: $("#type-other-cb").prop("checked")
+        },
     
         // Meeting Time:
-        lunch: $("#lunch-cb").prop("checked"),
-        afterSchool: $("#after-school-cb").prop("checked"),
-        meetingTimeOterh: $("#time-other-cb").prop("checked")
+        times : {
+            lunch: $("#lunch-cb").prop("checked"),
+            afterSchool: $("#after-school-cb").prop("checked"),
+            meetingTimeOterh: $("#time-other-cb").prop("checked")
+        }
     }
 }
 
@@ -49,27 +56,68 @@ const filterSearch = () => {
     const searchValue = $("#search-box").prop("value");
 
     const filteredClubs = [];
-
-    for (club of CLUB_LIST) {
-        if (!failsFilter(club, searchValue)) {
+    console.log(_filteredClubList)
+    for (club of _filteredClubList) {
+        if (!failsSearch(club, searchValue)) {
             filteredClubs.push(club);
         }
     }
     if(_displayedClubs.toString() != filteredClubs.toString()) {
         listClubs(filteredClubs);
     }
-    
 }
 
-const failsFilter = (club, query = "") => {
+const failsSearch = (club, query = "") => {
     club = club.toLowerCase();
     query = query.toLowerCase();
     return !(club).includes(query);
 }
 
+// filters through CLUB_LIST and sets _filteredClubList as result
 const applyFilters = () => {
-    const result = []
+    if(!CLUB_LIST) return;
+    
+    const result = [];
 
+    for (let club of CLUB_LIST) {
+        const clubData = CLUB_DATA[club];
+
+        // filter through club days
+        let passesDaysFilter = false;
+        for (let day in _currentSettings.days) {
+            if(_currentSettings.days[day] && clubData[day]) {
+                passesDaysFilter = true;
+                break;
+            }
+        }
+        if(!passesDaysFilter) continue;
+
+        // filter through club type
+        let passesTypeFilter = false;
+        for (let type in _currentSettings.types) {
+            if(_currentSettings.types[type] && clubData[type]) {
+                passesTypeFilter = true;
+                break;
+            }
+        }
+        if(!passesTypeFilter) continue;
+
+        // filter through club times
+        let passesTImesFilter = false;
+        for (let time in _currentSettings.times) {
+            if(_currentSettings.times[time] && clubData[time]) {
+                passesTImesFilter = true;
+                break;
+            }
+        }
+        if(!passesTImesFilter) continue;
+        
+        console.log(club)
+        result.push(club);
+    }
+
+    console.log(result)
+    _filteredClubList = result;
 }
 
 const listClubs = (clubs) => {
@@ -139,11 +187,10 @@ const randomizedList = list => {
 }
 
 // Get file containing club data
-jQuery.getJSON(`./data/club-to-link.json`, data => {
+jQuery.getJSON(`./data/club-cards.json`, data => {
     CLUB_DATA = data;
     CLUB_LIST_ALPHABETICAL = Object.keys(data);
     CLUB_LIST = randomizedList(CLUB_LIST_ALPHABETICAL);
-    _filteredClubList = CLUB_LIST;
     listClubs(CLUB_LIST);
 })
 // If file doesn't exist, throw error.
@@ -165,10 +212,13 @@ $(".dropdown-item").click(function() {
 $("#reset-filter-btn").click(function() {
     resetFilters();
     updateFilterSettings();
+    filterSearch();
 });
 
 $(".filter-checkbox").click(function() {
     updateFilterSettings();
+    applyFilters();
+    filterSearch();
 });
 
 $(".curious-btn").click(function() {
