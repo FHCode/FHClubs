@@ -1,0 +1,37 @@
+{
+    "Coding Club" : {
+        "link" : "coding",
+        "desc" : "this is a template for a description",
+        "mon": true,
+        "tues": true,
+        "wed": true,
+        "thur": true,
+        "fri": true,
+        "dayOther": true,
+        "academic": true,
+        "human": true,
+        "social": true,
+        "clubTypeOther": true,
+        "lunch": true,
+        "afterSchool": true,
+        "meetingTimeOther": true    
+    },
+
+    "Template" : {
+        "link" : "template",
+        "desc" : "this is a template for a description",
+        "mon": true,
+        "tues": true,
+        "wed": true,
+        "thur": true,
+        "fri": true,
+        "dayOther": true,
+        "academic": true,
+        "human": true,
+        "social": true,
+        "clubTypeOther": true,
+        "lunch": true,
+        "afterSchool": true,
+        "meetingTimeOther": true    
+    }
+}

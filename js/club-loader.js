@@ -1,4 +1,4 @@
-// returns a dictionary of HTTP parameters & values
+// returns a hash of HTTP parameters & values
 const getHttpParams = () => {
   let result = {};
   
@@ -30,18 +30,21 @@ const getHttpParams = () => {
 
 const HTTP_PARAMS_HASH = getHttpParams();
 
+// gets the parameter value related to club name
 const CLUB = HTTP_PARAMS_HASH.q;
 
-const newCarouselItem = (imgSrc) => {
+// returns html for new carousel image
+const generateCarouselItem = (imgSrc) => {
   return `<div class="carousel-item">
     <img class="d-block w-100 carousel-image" src="${imgSrc}" width="100%" height="100%">
   </div>`;
 }
 
+// given an array of image urls, returns returns html for carousel filled with images
 const generateCarousel = (imgArr) => {
   let result = "";
   for(let img of imgArr) {
-    result += newCarouselItem(img);
+    result += generateCarouselItem(img);
   }
   // makes first item active
   const firstItemIndex = result.search("carousel-item");
@@ -51,7 +54,8 @@ const generateCarousel = (imgArr) => {
   return result;
 }
 
-const generateCarouselBtns = (imgArr) => {
+// returns html for carousel indicator buttons
+const generateCarouselIndicators = (imgArr) => {
   let result = "";
   for(let i in imgArr) {
     result += `<button type="button" data-bs-target="#club-carousel" data-bs-slide-to="${i}" aria-label="Slide ${i}"></button>`
@@ -63,6 +67,7 @@ const generateCarouselBtns = (imgArr) => {
   return result;
 }
 
+// binds the socials buttons to urls IF they exist
 const loadSocials = (data) => {
   if(data.socials.instagram) {
     $("#insta-icon").wrap(`<a href="${data.socials.instagram}" target="_blank">`).addClass("has-link");
@@ -77,23 +82,23 @@ const loadSocials = (data) => {
   }
 }
 
-const insertClubInfo = (data) => {
+// replaces elements on page with club info
+const loadClubInfo = (data) => {
   $("#club-title").text(data.title);
   $("#room-num").text(data.room);
   $("#teachers-name").text(data.teacher);
   $("#schedule-desc").text(data.schedule);
   $("#club-imgs-container").html(generateCarousel(data.carousel))
-  $("#car-indicator-cont").html(generateCarouselBtns(data.carousel));
+  $("#car-indicator-cont").html(generateCarouselIndicators(data.carousel));
   $("#purpose-para").text(data.purpose);
   $("#typical-para").text(data.typicalWeek);
   loadSocials(data);
 }
 
-// Get Data Json File
+// If club data file exists, load club
 jQuery.getJSON(`./data/clubs/${CLUB}/info.json`, data => {
-  console.log(data);
-  insertClubInfo(data);
+  loadClubInfo(data);
 })
-.fail( () => {
+.fail( () => { // otherwise, give error
   $("#club-title").text("Sorry, this club doesn't exist!");
 });

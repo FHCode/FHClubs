@@ -7,13 +7,10 @@ $(".curious-btn").click(function() {
 // Scales element's height to maintain a 16:9 ratio
 function resizeCardImg() { 
     $(this).css("height", 9/16 * this.width);
+    console.log($(this).css("width"));
 }
 
 // resize club cards when window is adjusted
 $(window).resize(function () { 
     $(".card-img").each(resizeCardImg);
 });
-
-$(document).ready(function () {
-    $(".card-img").each(resizeCardImg);
-})

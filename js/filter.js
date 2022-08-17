@@ -2,6 +2,7 @@ let fullClubListAlphabetical = [];
 let fullClubList = [];
 let displayedClubs = [];
 let currentSettings;
+let fullClubData = {};
 
 const resetFilters = () => {
     $(".filter-checkbox").each(function () {
@@ -59,12 +60,17 @@ $(".filter-checkbox").click(function() {
     updateFilterSettings();
 });
 
-// get club list
-$.get("./data/club-list", data => { 
-    fullClubListAlphabetical = data.split("\n");
+// Get file containing club data
+jQuery.getJSON(`./data/club-to-link.json`, data => {
+    fullClubData = data;
+    fullClubListAlphabetical = Object.keys(data);
     fullClubList = randomizedList(fullClubListAlphabetical);
     listClubs(fullClubList);
+})
+.fail( () => { // If file doesn't exist, throw error.
+    $(".title-heading").html("Sorry, the website isn't working. <br> Please come back later.");
 });
+
 
 
 $("#search-box").keyup(e => {
@@ -113,12 +119,23 @@ const listClubs = (clubs) => {
 
 const fillCard = (
     card, 
-    title = "Club Title",
-    href = "./club.html?q=unknown",
-    description = lorem,
-    src = "./data/clubs/template/img/thumbnail0.png"
+    club
 ) => {
-    card.innerHTML = `<div class="card-hover"> <a href="${href}" class="no-url-effects"> <div class="card mb-4 box-shadow-light"> <!-- <div class="card-img"></div> --> <img class="card-img" src="${src}" alt="-"> <div class="card-body"> <h4 class="club-title title-crop">${title}</h4> <p class="club-text text-muted text-crop"> ${description} </p> </div> </div> </a> </div>`;
+    const clubData = fullClubData[club];
+    src = "./data/clubs/template/img/thumbnail0.png";
+
+    card.innerHTML = 
+    `<div class="card-hover">
+        <a href="./club.html?q=${clubData.link}" class="no-url-effects">
+            <div class="card mb-4 box-shadow-light">
+                <!-- <div class="card-img"></div> -->
+                    <img class="card-img" src="${src}" alt="-"> <div class="card-body">
+                    <h4 class="club-title title-crop">${club}</h4>
+                    <p class="club-text text-muted text-crop"> ${clubData.desc}</p>
+                </div>
+            </div>
+        </a>
+    </div>`;
 }
 
 const sortCards = (mode) => {
@@ -144,5 +161,3 @@ const randomizedList = list => {
 
     return list;
 }
-
-const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestiae fugiat obcaecati perferendis tempora. Blanditiis dicta ipsam, quasi, quibusdam porro et illo nulla ex qui, consequuntur suscipit cupiditate. Illo voluptas incidunt dolorum officiis alias neque quis voluptatum, modi et tempore dolor asperiores obcaecati, dolores nihil. Vitae iusto eos ducimus corporis tempore ex impedit, maiores assumenda quae sed ipsam earum sint odit magni, eligendi maxime, suscipit necessitatibus quam debitis fuga animi! Repellat mollitia possimus earum, impedit nostrum sapiente alias dolorem aliquam animi delectus, dicta quas ratione commodi at officiis eveniet amet facere ipsa quidem suscipit error sunt? Iusto laboriosam dicta molestiae.";
