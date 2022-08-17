@@ -95,7 +95,7 @@
 }
 
 .card-hover {
-  outline: 0 solid lightslategray;
+  outline: 0 solid rgb(70, 70, 70);
   transition: outline-width .2s linear, transform .15s linear;
 }
 

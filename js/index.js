@@ -4,6 +4,7 @@ let CLUB_LIST = [];
 let CLUB_DATA = {};
 
 // Local Variables
+let _filteredClubList = [];
 let _displayedClubs = [];
 let _currentSettings;
 
@@ -44,37 +45,6 @@ const updateFilterSettings = () => {
     }
 }
 
-$(".dropdown-item").click(function() {
-    const sortMode = $(this).text();
-    $("#filter-dropdown").text(sortMode);
-    
-    sortClubList(sortMode);
-});
-
-$("#reset-filter-btn").click(function() {
-    resetFilters();
-    updateFilterSettings();
-});
-
-$(".filter-checkbox").click(function() {
-    updateFilterSettings();
-});
-
-// Get file containing club data
-jQuery.getJSON(`./data/club-to-link.json`, data => {
-    CLUB_DATA = data;
-    CLUB_LIST_ALPHABETICAL = Object.keys(data);
-    CLUB_LIST = randomizedList(CLUB_LIST_ALPHABETICAL);
-    listClubs(CLUB_LIST);
-})
-.fail( () => { // If file doesn't exist, throw error.
-    $(".title-heading").html("Sorry, the website isn't working. <br> Please come back later.");
-});
-
-$("#search-box").keyup(e => {
-    filterSearch();
-});
-
 const filterSearch = () => {
     const searchValue = $("#search-box").prop("value");
 
@@ -95,6 +65,11 @@ const failsFilter = (club, query = "") => {
     club = club.toLowerCase();
     query = query.toLowerCase();
     return !(club).includes(query);
+}
+
+const applyFilters = () => {
+    const result = []
+
 }
 
 const listClubs = (clubs) => {
@@ -162,6 +137,39 @@ const randomizedList = list => {
 
     return list;
 }
+
+// Get file containing club data
+jQuery.getJSON(`./data/club-to-link.json`, data => {
+    CLUB_DATA = data;
+    CLUB_LIST_ALPHABETICAL = Object.keys(data);
+    CLUB_LIST = randomizedList(CLUB_LIST_ALPHABETICAL);
+    _filteredClubList = CLUB_LIST;
+    listClubs(CLUB_LIST);
+})
+// If file doesn't exist, throw error.
+.fail( () => {
+    $(".title-heading").html("Sorry, the website isn't working. <br> Please come back later.");
+});
+
+$("#search-box").keyup(e => {
+    filterSearch();
+});
+
+$(".dropdown-item").click(function() {
+    const sortMode = $(this).text();
+    $("#filter-dropdown").text(sortMode);
+    
+    sortClubList(sortMode);
+});
+
+$("#reset-filter-btn").click(function() {
+    resetFilters();
+    updateFilterSettings();
+});
+
+$(".filter-checkbox").click(function() {
+    updateFilterSettings();
+});
 
 $(".curious-btn").click(function() {
     if (CLUB_LIST.length === 0) return;

@@ -12,8 +12,8 @@
   "schedule" : "some sentences that informs the meeting times",
   "primaryColor" : "#000",
   "socials" : {
-    "instagram" : "link",
-    "discord" : "link",
-    "teams" : "link"
+    "instagram" : "",
+    "discord" : "",
+    "teams" : ""
   }
 }
