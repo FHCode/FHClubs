@@ -1,6 +1,7 @@
 {
     "Coding Club" : {
         "link" : "coding",
+        "thumbnail" : "https://raw.githubusercontent.com/brhzhou/kirby-site/master/img/kirby-mario.jpg",
         "desc" : "this is a template for a description",
         "mon": true,
         "tues": true,
@@ -19,6 +20,7 @@
 
     "Template" : {
         "link" : "template",
+        "thumbnail" : "",
         "desc" : "this is a template for a description",
         "mon": true,
         "tues": true,

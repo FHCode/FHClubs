@@ -138,13 +138,6 @@ body {
   color: rgb(181, 216, 228);
 }
 
-.square-placeholder {
-  width: 500px;
-  height: 500px;
-  background-color: #eee;
-  color: #aaa;
-}
-
 .modal-dialog {
   top: 20%;
 }

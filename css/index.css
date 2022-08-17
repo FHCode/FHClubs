@@ -34,8 +34,6 @@
   max-width: 40rem;
 }
 
-
-
 /* Filter Section */
 
 .filter-btn {
@@ -53,6 +51,17 @@
 }
 
 /* Card Section */
+
+.thumbnail-placeholder-outer {
+  width: 100%;
+}
+
+.thumbnail-placeholder {
+  padding-top: 56.25%; /* makes thumbnails 16:9 ratio*/
+  background-color: #aaa;
+  background-size: 100%;
+}
+
 
 .card-img {
   object-fit: cover;
@@ -86,7 +95,7 @@
 }
 
 .card-hover {
-  outline: 0 solid lightblue;
+  outline: 0 solid lightslategray;
   transition: outline-width .2s linear, transform .15s linear;
 }
 
