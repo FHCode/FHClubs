@@ -37,7 +37,7 @@
         "meetingTimeOther": false    
     },
 
-    "club# 0": {
+    "club# 100": {
         "link": "template",
         "thumbnail": "https://raw.githubusercontent.com/brhzhou/kirby-site/master/img/kirby-mario.jpg",
         "desc": "this is a template for a description",
