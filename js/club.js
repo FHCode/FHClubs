@@ -57,6 +57,8 @@ const generateCarousel = (imgArr) => {
 // returns html for carousel indicator buttons
 const generateCarouselIndicators = (imgArr) => {
   let result = "";
+  if(imgArr.length <= 1) return result;
+
   for(let i in imgArr) {
     result += `<button type="button" data-bs-target="#club-carousel" data-bs-slide-to="${i}" aria-label="Slide ${i}"></button>`
   }
@@ -85,6 +87,7 @@ const loadSocials = (data) => {
 // replaces elements on page with club info
 const loadClubInfo = (data) => {
   $("#club-title").text(data.title);
+  $("title").text(data.title);
   $("#room-num").text(data.room);
   $("#teachers-name").text(data.teacher);
   $("#schedule-desc").text(data.schedule);
@@ -92,6 +95,12 @@ const loadClubInfo = (data) => {
   $("#car-indicator-cont").html(generateCarouselIndicators(data.carousel));
   $("#purpose-para").text(data.purpose);
   $("#typical-para").text(data.typicalWeek);
+  
+  if(data.carousel.length > 1) {
+    $(".carousel-control-prev").removeClass("visually-hidden");
+    $(".carousel-control-next").removeClass("visually-hidden");
+  }
+
   loadSocials(data);
 }
 
