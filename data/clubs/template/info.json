@@ -1,11 +1,11 @@
 {
-  "title": "[Club Name]",
+  "title": "Club Template",
   "teacher" : "[teacher name]",
   "room" : "[room #]",
   "carousel" : [
-    "./data/clubs/template/img/slides/1.png",
-    "./data/clubs/template/img/slides/2.png",
-    "./data/clubs/template/img/slides/3.png"
+    "./data/clubs/template/img/slides/1.jpg",
+    "./data/clubs/template/img/slides/2.jpg",
+    "./img/space.jpg"
   ],
   "purpose" : "Describe the purpose of your club.",
   "typicalWeek": "Describe that typeically happens during meetings.", 

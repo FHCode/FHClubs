@@ -3,10 +3,7 @@
   "teacher" : "Ms. Li",
   "room" : "103",
   "carousel" : [
-    "./img/space.jpg",
-    "./data/clubs/template/img/slides/1.png",
-    "./data/clubs/template/img/slides/2.png",
-    "./data/clubs/template/img/slides/3.png"
+    "./img/space.jpg"
   ],
   "purpose" : "(A paragraph that describes the purpose of your club.)",
   "typicalWeek": "(A paragraph that describes what happens during meetings.)", 
