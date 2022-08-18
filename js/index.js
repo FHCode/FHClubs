@@ -1,12 +1,12 @@
 // Global Variables
-let CLUB_LIST_ALPHABETICAL = [];
+let CLUB_LIST_ALPH = [];
 let CLUB_LIST = [];
-let CLUB_DATA = {};
+let RAW_SEARCH_DATA = {};
 
 // Local Variables
 let _filteredClubList = [];
 let _displayedClubs = [];
-let _currentSettings;
+let _currentSettings = {};
 
 // Sets all the filters back to default values
 const resetFilters = () => {
@@ -26,7 +26,7 @@ const resetFilters = () => {
 const updateFilterSettings = () => {
     _currentSettings = {    
         // Day
-        days : {
+        "days" : {
             mon: $("#mon-cb").prop("checked"),
             tues: $("#tues-cb").prop("checked"),
             wed: $("#wed-cb").prop("checked"),
@@ -36,7 +36,7 @@ const updateFilterSettings = () => {
         },
     
         // Club Type
-        types : {
+        "types" : {
             academic: $("#aca-cb").prop("checked"),
             human: $("#hum-cb").prop("checked"),
             social: $("#soc-cb").prop("checked"),
@@ -44,27 +44,27 @@ const updateFilterSettings = () => {
         },
     
         // Meeting Time:
-        times : {
+        "times" : {
             lunch: $("#lunch-cb").prop("checked"),
             afterSchool: $("#after-school-cb").prop("checked"),
-            meetingTimeOterh: $("#time-other-cb").prop("checked")
+            meetingTimeOther: $("#time-other-cb").prop("checked")
         }
     }
+
+    console.log(_currentSettings);
 }
 
-const filterSearch = () => {
+const SearchFilteredList = () => {
     const searchValue = $("#search-box").prop("value");
 
     const filteredClubs = [];
-    console.log(_filteredClubList)
     for (club of _filteredClubList) {
         if (!failsSearch(club, searchValue)) {
             filteredClubs.push(club);
         }
     }
-    if(_displayedClubs.toString() != filteredClubs.toString()) {
-        listClubs(filteredClubs);
-    }
+    
+    listClubs(filteredClubs);
 }
 
 const failsSearch = (club, query = "") => {
@@ -74,13 +74,13 @@ const failsSearch = (club, query = "") => {
 }
 
 // filters through CLUB_LIST and sets _filteredClubList as result
-const applyFilters = () => {
+const filterClubList = () => {
     if(!CLUB_LIST) return;
     
     const result = [];
 
     for (let club of CLUB_LIST) {
-        const clubData = CLUB_DATA[club];
+        const clubData = RAW_SEARCH_DATA[club];
 
         // filter through club days
         let passesDaysFilter = false;
@@ -90,7 +90,12 @@ const applyFilters = () => {
                 break;
             }
         }
-        if(!passesDaysFilter) continue;
+
+        if(!passesDaysFilter) {
+            console.log(club + " failed passesDays");
+            console.log(clubData);
+            continue;
+        }
 
         // filter through club type
         let passesTypeFilter = false;
@@ -100,24 +105,32 @@ const applyFilters = () => {
                 break;
             }
         }
-        if(!passesTypeFilter) continue;
+
+        if(!passesTypeFilter) {
+            console.log(club + " failed passesTypes");
+            continue;
+        }
+
 
         // filter through club times
-        let passesTImesFilter = false;
+        let passesTimesFilter = false;
         for (let time in _currentSettings.times) {
             if(_currentSettings.times[time] && clubData[time]) {
-                passesTImesFilter = true;
+                passesTimesFilter = true;
                 break;
             }
         }
-        if(!passesTImesFilter) continue;
+
+        if(!passesTimesFilter) {
+            console.log(club + " failed passesTimes");
+            continue;
+        }
         
-        console.log(club)
         result.push(club);
     }
 
-    console.log(result)
     _filteredClubList = result;
+    console.log(_filteredClubList);
 }
 
 const listClubs = (clubs) => {
@@ -139,7 +152,7 @@ const listClubs = (clubs) => {
 }
 
 const fillCard = (card, clubName) => {
-    const clubData = CLUB_DATA[clubName];
+    const clubData = RAW_SEARCH_DATA[clubName];
 
     card.innerHTML = 
     `<div class="card-hover">
@@ -163,12 +176,13 @@ const fillCard = (card, clubName) => {
 
 const sortClubList = (mode) => {
     if(mode == "Alphabetical") {
-        CLUB_LIST = CLUB_LIST_ALPHABETICAL;
+        CLUB_LIST = CLUB_LIST_ALPH;
     } else {
-        CLUB_LIST = randomizedList(CLUB_LIST_ALPHABETICAL);
+        CLUB_LIST = randomizedList(CLUB_LIST_ALPH);
     }
 
-    filterSearch();
+    filterClubList();
+    SearchFilteredList();
 }
 
 // Returns a randomized version of a list
@@ -188,18 +202,21 @@ const randomizedList = list => {
 
 // Get file containing club data
 jQuery.getJSON(`./data/club-cards.json`, data => {
-    CLUB_DATA = data;
-    CLUB_LIST_ALPHABETICAL = Object.keys(data);
-    CLUB_LIST = randomizedList(CLUB_LIST_ALPHABETICAL);
+    RAW_SEARCH_DATA = data;
+    CLUB_LIST_ALPH = Object.keys(data);
+
+    CLUB_LIST = randomizedList(CLUB_LIST_ALPH);
+    _filteredClubList = CLUB_LIST;
     listClubs(CLUB_LIST);
 })
+
 // If file doesn't exist, throw error.
 .fail( () => {
     $(".title-heading").html("Sorry, the website isn't working. <br> Please come back later.");
 });
 
 $("#search-box").keyup(e => {
-    filterSearch();
+    SearchFilteredList();
 });
 
 $(".dropdown-item").click(function() {
@@ -212,19 +229,18 @@ $(".dropdown-item").click(function() {
 $("#reset-filter-btn").click(function() {
     resetFilters();
     updateFilterSettings();
-    filterSearch();
+    SearchFilteredList();
 });
 
 $(".filter-checkbox").click(function() {
     updateFilterSettings();
-    applyFilters();
-    filterSearch();
+    filterClubList();
+    SearchFilteredList();
 });
 
 $(".curious-btn").click(function() {
-    if (CLUB_LIST.length === 0) return;
-    const randClub = randChoice(CLUB_LIST);
-    window.location.href = `./club.html?q=${CLUB_DATA[randClub].link}`;
+    if (CLUB_LIST.length === 0) return; 
+    window.location.href = `./club.html?q=${RAW_SEARCH_DATA[randChoice(CLUB_LIST)].link}`;
 });
 
 $(document).ready(() => {
