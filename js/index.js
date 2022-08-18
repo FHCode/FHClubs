@@ -203,20 +203,6 @@ const randomizedList = list => {
     return list;
 }
 
-// Get file containing club data
-jQuery.getJSON(`./data/club-cards.json?noCache=${Math.random()}`, data => {
-    RAW_SEARCH_DATA = data;
-    CLUB_LIST_ALPH = Object.keys(data);
-
-    CLUB_LIST = randomizedList(CLUB_LIST_ALPH);
-    _filteredClubList = CLUB_LIST;
-    listClubs(CLUB_LIST);
-})
-// If file doesn't exist, throw error.
-.fail( () => {
-    $(".title-heading").html("Sorry, the website isn't working. <br> Please come back later.");
-});
-
 // EVENTS
 
 $("#search-box").keyup(e => {
@@ -248,5 +234,20 @@ $(".curious-btn").click(function() {
 });
 
 $(document).ready(() => {
+    $.ajaxSetup({ cache: false });
     resetFilters();
+
+    // Get file containing club data
+    jQuery.getJSON(`./data/club-cards.json`, data => {
+        RAW_SEARCH_DATA = data;
+        CLUB_LIST_ALPH = Object.keys(data);
+
+        CLUB_LIST = randomizedList(CLUB_LIST_ALPH);
+        _filteredClubList = CLUB_LIST;
+        listClubs(CLUB_LIST);
+    })
+    // If file doesn't exist, throw error.
+    .fail( () => {
+        $(".title-heading").html("Sorry, the website isn't working. <br> Please come back later.");
+    });
 });

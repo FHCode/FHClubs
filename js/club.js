@@ -95,10 +95,15 @@ const loadClubInfo = (data) => {
   loadSocials(data);
 }
 
-// If club data file exists, load club
-jQuery.getJSON(`./data/clubs/${CLUB}/info.json?noCache=${Math.random()}`, data => {
-  loadClubInfo(data);
-})
-.fail( () => { // otherwise, give error
-  $("#club-title").text("Sorry, this club doesn't exist!");
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  // If club data file exists, load club
+  jQuery.getJSON(`./data/clubs/${CLUB}/info.json`, data => {
+    loadClubInfo(data);
+  })
+  .fail( () => { // otherwise, give error
+    $("#club-title").text("Sorry, this club doesn't exist!");
+  });
+
 });
