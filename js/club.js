@@ -96,7 +96,7 @@ const loadClubInfo = (data) => {
 }
 
 // If club data file exists, load club
-jQuery.getJSON(`./data/clubs/${CLUB}/info.json`, data => {
+jQuery.getJSON(`./data/clubs/${CLUB}/info.json?noCache=${Math.random()}`, data => {
   loadClubInfo(data);
 })
 .fail( () => { // otherwise, give error

@@ -204,7 +204,7 @@ const randomizedList = list => {
 }
 
 // Get file containing club data
-jQuery.getJSON(`./data/club-cards.json`, data => {
+jQuery.getJSON(`./data/club-cards.json?noCache=${Math.random()}`, data => {
     RAW_SEARCH_DATA = data;
     CLUB_LIST_ALPH = Object.keys(data);
 

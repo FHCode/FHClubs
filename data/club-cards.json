@@ -20,7 +20,7 @@
     
     "Template" : {
         "link" : "template",
-        "thumbnail" : "",
+        "thumbnail" : "./data/clubs/template/img/thumbnail.jpg",
         "desc" : "this is a template for a description",
         "mon": false,
         "tues": false,
