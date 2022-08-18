@@ -1,12 +1,15 @@
+// CONSTANTS
+const CLUB_CARD_CONTAINER = $("#club-cards");
+
 // Global Variables
-let CLUB_LIST_ALPH = [];
 let CLUB_LIST = [];
-let RAW_SEARCH_DATA = {};
+let CLUB_LIST_ALPH = []; // alphabetical copy of club_list
+let RAW_SEARCH_DATA = {}; // json file containing search info
 
 // Local Variables
 let _filteredClubList = [];
 let _displayedClubs = [];
-let _currentSettings = {};
+let _filterSettings = {};
 
 // Sets all the filters back to default values
 const resetFilters = () => {
@@ -24,8 +27,7 @@ const resetFilters = () => {
 
 // Syncs '_currentSettings' object with filters
 const updateFilterSettings = () => {
-    _currentSettings = {    
-        // Day
+    _filterSettings = {    
         "days" : {
             mon: $("#mon-cb").prop("checked"),
             tues: $("#tues-cb").prop("checked"),
@@ -35,7 +37,6 @@ const updateFilterSettings = () => {
             dayOther: $("#day-other-cb").prop("checked")
         },
     
-        // Club Type
         "types" : {
             academic: $("#aca-cb").prop("checked"),
             human: $("#hum-cb").prop("checked"),
@@ -43,18 +44,16 @@ const updateFilterSettings = () => {
             clubTypeOther: $("#type-other-cb").prop("checked")
         },
     
-        // Meeting Time:
         "times" : {
             lunch: $("#lunch-cb").prop("checked"),
             afterSchool: $("#after-school-cb").prop("checked"),
             meetingTimeOther: $("#time-other-cb").prop("checked")
         }
     }
-
-    console.log(_currentSettings);
 }
 
-const SearchFilteredList = () => {
+// querys through filtered lists for search keyword and displays results
+const queryAndSearch = () => {
     const searchValue = $("#search-box").prop("value");
 
     const filteredClubs = [];
@@ -63,10 +62,13 @@ const SearchFilteredList = () => {
             filteredClubs.push(club);
         }
     }
-    
-    listClubs(filteredClubs);
+
+    if(_displayedClubs.toString() != filteredClubs.toString()) {
+        listClubs(filteredClubs);
+    }
 }
 
+// returns true if query isn't a substring of club
 const failsSearch = (club, query = "") => {
     club = club.toLowerCase();
     query = query.toLowerCase();
@@ -84,45 +86,41 @@ const filterClubList = () => {
 
         // filter through club days
         let passesDaysFilter = false;
-        for (let day in _currentSettings.days) {
-            if(_currentSettings.days[day] && clubData[day]) {
+        for (let day in _filterSettings.days) {
+            if(_filterSettings.days[day] && clubData[day]) {
                 passesDaysFilter = true;
                 break;
             }
         }
 
         if(!passesDaysFilter) {
-            console.log(club + " failed passesDays");
-            console.log(clubData);
             continue;
         }
 
         // filter through club type
         let passesTypeFilter = false;
-        for (let type in _currentSettings.types) {
-            if(_currentSettings.types[type] && clubData[type]) {
+        for (let type in _filterSettings.types) {
+            if(_filterSettings.types[type] && clubData[type]) {
                 passesTypeFilter = true;
                 break;
             }
         }
 
         if(!passesTypeFilter) {
-            console.log(club + " failed passesTypes");
             continue;
         }
 
 
         // filter through club times
         let passesTimesFilter = false;
-        for (let time in _currentSettings.times) {
-            if(_currentSettings.times[time] && clubData[time]) {
+        for (let time in _filterSettings.times) {
+            if(_filterSettings.times[time] && clubData[time]) {
                 passesTimesFilter = true;
                 break;
             }
         }
 
         if(!passesTimesFilter) {
-            console.log(club + " failed passesTimes");
             continue;
         }
         
@@ -130,30 +128,32 @@ const filterClubList = () => {
     }
 
     _filteredClubList = result;
-    console.log(_filteredClubList);
 }
 
+// given list of clubs, displays their cards on screen
 const listClubs = (clubs) => {
-    const clubDiv = $("#club-cards");
-    clubDiv.empty();
+    CLUB_CARD_CONTAINER.empty();
 
     for (club of clubs) {
-        const card = document.createElement("div");
-        card.classList.add("col-lg-4", "col-md-6", "club-card","hidden");
-        fillCard(card, club);
-        clubDiv.append(card);
+        CLUB_CARD_CONTAINER.append(newCard(club));
     }
 
     _displayedClubs = clubs;
 
+    // fade in animation
     $(".club-card").each(function() {
         $(this).fadeIn().removeClass("hidden");
     });
 }
 
-const fillCard = (card, clubName) => {
-    const clubData = RAW_SEARCH_DATA[clubName];
+// creates and returns a new card
+const newCard = (club) => {
+    const clubData = RAW_SEARCH_DATA[club];
+    const card = document.createElement("div");
 
+    card.classList.add("col-lg-4", "col-md-6", "club-card","hidden");
+
+    // add thumbnail
     card.innerHTML = 
     `<div class="card-hover">
         <a href="./club.html?q=${clubData.link}" class="no-url-effects">
@@ -162,7 +162,7 @@ const fillCard = (card, clubName) => {
                     <div class="thumbnail-placeholder"></div>
                 </div>
                 <div class="card-body">
-                    <h4 class="club-title title-crop">${clubName}</h4>
+                    <h4 class="club-title title-crop">${club}</h4>
                     <p class="club-text text-muted text-crop"> ${clubData.desc}</p>
                 </div>
             </div>
@@ -172,8 +172,11 @@ const fillCard = (card, clubName) => {
     const imgDiv = card.getElementsByClassName("thumbnail-placeholder")[0];
 
     $(imgDiv).css("background-image", `url(${clubData.thumbnail})`);
+
+    return card;
 }
 
+// Sets CLUB_LIST to targeted mode
 const sortClubList = (mode) => {
     if(mode == "Alphabetical") {
         CLUB_LIST = CLUB_LIST_ALPH;
@@ -182,7 +185,7 @@ const sortClubList = (mode) => {
     }
 
     filterClubList();
-    SearchFilteredList();
+    queryAndSearch();
 }
 
 // Returns a randomized version of a list
@@ -209,38 +212,39 @@ jQuery.getJSON(`./data/club-cards.json`, data => {
     _filteredClubList = CLUB_LIST;
     listClubs(CLUB_LIST);
 })
-
 // If file doesn't exist, throw error.
 .fail( () => {
     $(".title-heading").html("Sorry, the website isn't working. <br> Please come back later.");
 });
 
+// EVENTS
+
 $("#search-box").keyup(e => {
-    SearchFilteredList();
+    queryAndSearch();
 });
 
 $(".dropdown-item").click(function() {
     const sortMode = $(this).text();
     $("#filter-dropdown").text(sortMode);
-    
     sortClubList(sortMode);
 });
 
 $("#reset-filter-btn").click(function() {
     resetFilters();
     updateFilterSettings();
-    SearchFilteredList();
+    queryAndSearch();
 });
 
 $(".filter-checkbox").click(function() {
     updateFilterSettings();
     filterClubList();
-    SearchFilteredList();
+    queryAndSearch();
 });
 
 $(".curious-btn").click(function() {
     if (CLUB_LIST.length === 0) return; 
-    window.location.href = `./club.html?q=${RAW_SEARCH_DATA[randChoice(CLUB_LIST)].link}`;
+    const randClubLink = RAW_SEARCH_DATA[randChoice(CLUB_LIST)].link;
+    window.location.href = `./club.html?q=${randClubLink}`;
 });
 
 $(document).ready(() => {
