@@ -20,6 +20,8 @@ with open(CSV_FILE_PATH, encoding='utf-8') as csvf:
 
         data[key]["link"] = link
 
+        data[key]["thumbnail"] = "data\clubs\template\img\thumbnail.png"
+
         data[key]["desc"] = row["Describe your club in one sentence"]
 
         data[key]["mon"] = False
