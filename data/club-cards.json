@@ -1,7 +1,7 @@
 {
     "template club": {
         "link": "template",
-        "thumbnail": "data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./data/clubs/template/img/thumbnail.png",
         "desc": "test",
         "mon": false,
         "tue": false,
@@ -19,7 +19,7 @@
     },
     "template": {
         "link": "template",
-        "thumbnail": "data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./data/clubs/template/img/thumbnail.png",
         "desc": "test",
         "mon": false,
         "tue": false,
@@ -37,7 +37,7 @@
     },
     "Coding Club": {
         "link": "coding",
-        "thumbnail": "data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./data/clubs/template/img/thumbnail.png",
         "desc": "A programming environment welcoming people of all skill levels.",
         "mon": false,
         "tue": true,
