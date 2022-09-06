@@ -27,23 +27,23 @@ const resetFilters = () => {
 
 // Syncs '_currentSettings' object with filters
 const updateFilterSettings = () => {
-    _filterSettings = {    
+    _filterSettings = {
         "days" : {
             mon: $("#mon-cb").prop("checked"),
-            tues: $("#tues-cb").prop("checked"),
+            tue: $("#tue-cb").prop("checked"),
             wed: $("#wed-cb").prop("checked"),
-            thur: $("#thur-cb").prop("checked"),
+            thu: $("#thu-cb").prop("checked"),
             fri: $("#fri-cb").prop("checked"),
             dayOther: $("#day-other-cb").prop("checked")
         },
-    
+
         "types" : {
             academic: $("#aca-cb").prop("checked"),
             human: $("#hum-cb").prop("checked"),
             social: $("#soc-cb").prop("checked"),
             clubTypeOther: $("#type-other-cb").prop("checked")
         },
-    
+
         "times" : {
             lunch: $("#lunch-cb").prop("checked"),
             afterSchool: $("#after-school-cb").prop("checked"),
@@ -78,7 +78,7 @@ const failsSearch = (club, query = "") => {
 // filters through CLUB_LIST and sets _filteredClubList as result
 const filterClubList = () => {
     if(!CLUB_LIST) return;
-    
+
     const result = [];
 
     for (let club of CLUB_LIST) {
@@ -123,7 +123,7 @@ const filterClubList = () => {
         if(!passesTimesFilter) {
             continue;
         }
-        
+
         result.push(club);
     }
 
@@ -154,7 +154,7 @@ const newCard = (club) => {
     card.classList.add("col-lg-4", "col-md-6", "club-card","hidden");
 
     // add thumbnail
-    card.innerHTML = 
+    card.innerHTML =
     `<div class="card-hover">
         <a href="./club.html?q=${clubData.link}" class="no-url-effects">
             <div class="card mb-4 box-shadow-light">
@@ -190,7 +190,7 @@ const sortClubList = (mode) => {
 
 // Returns a randomized version of a list
 const randomizedList = list => {
-    list = list.slice(); 
+    list = list.slice();
     // copies list
 
     for (let i = 0; i < list.length; i++) {
@@ -228,7 +228,7 @@ $(".filter-checkbox").click(function() {
 });
 
 $(".curious-btn").click(function() {
-    if (CLUB_LIST.length === 0) return; 
+    if (CLUB_LIST.length === 0) return;
     const randClubLink = RAW_SEARCH_DATA[randChoice(CLUB_LIST)].link;
     window.location.href = `./club.html?q=${randClubLink}`;
 });
