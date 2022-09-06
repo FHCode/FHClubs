@@ -14,8 +14,8 @@ with open(CSV_FILE_PATH, encoding='utf-8') as csvf:
 
         data[key] = {}
 
-        link = row["Name of your club"].replace(" club", '')
-        link = link.replace(" Club", '')
+        link = row["Name of your club"].lower()
+        link = link.replace(" club", '')
         link = link.replace(" ", '_')
 
         data[key]["link"] = link

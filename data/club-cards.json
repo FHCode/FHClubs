@@ -34,7 +34,7 @@
         "meetingTimeOther": true
     },
     "Coding Club": {
-        "link": "Coding",
+        "link": "coding",
         "desc": "A programming environment welcoming people of all skill levels.",
         "mon": false,
         "tue": true,
