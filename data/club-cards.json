@@ -5,7 +5,7 @@
         "desc": "Service based club which helps out in the school and the community at large. Work actively with Lion's Club of Canada outside of school and on projects within the school.",
         "mon": false,
         "tue": false,
-        "wed": false,
+        "wed": true,
         "thu": false,
         "fri": false,
         "dayOther": true,
