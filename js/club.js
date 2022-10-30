@@ -1,26 +1,26 @@
 // returns a hash of HTTP parameters & values
 const getHttpParams = () => {
   let result = {};
-  
+
   let href = window.location.href;
-  
+
   if(href.slice(-1) == "#") {
     href = href.slice(0, -1);
   }
 
   const paramStartIndex = href.indexOf("?");
-  
+
   if (paramStartIndex == -1) return result;
-  
+
   const httpParamsStr = href.slice( paramStartIndex + 1 );
   const httpParamsArr = httpParamsStr.split("&");
-  
+
   for (const parameter of httpParamsArr) {
     const sepPos = parameter.indexOf("=");
     if(sepPos != -1) {
       const keyStr = parameter.slice(0, sepPos);
       const valueStr = parameter.slice(sepPos + 1);
-      
+
       result[keyStr] = valueStr;
     }
   }
@@ -95,14 +95,16 @@ const loadClubInfo = (data) => {
   $("#car-indicator-cont").html(generateCarouselIndicators(data.carousel));
   $("#purpose-para").text(data.purpose);
   $("#typical-para").text(data.typicalWeek);
-  
+  $("#purpose-img").html(`<img src="${data.purposeImg}" alt="-">`);
+  $("#meeting-img").html(`<img src="${data.meetingImg}" alt="-">`);
+
   if(data.carousel.length > 1) {
     $(".carousel-control-prev").removeClass("visually-hidden");
     $(".carousel-control-next").removeClass("visually-hidden");
   }
-
   loadSocials(data);
 }
+
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
