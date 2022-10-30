@@ -7,6 +7,8 @@
     ],
     "purpose": "To create and prepare teams to participate in the Reach for the Top trivia competition.",
     "typicalWeek": "Practice trivia games, coaching.",
+    "purposeImg": "./data/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/placeholder/img/meeting.jpg",
     "schedule": "We meet on Fridays at Lunchtime. Come Join us!",
     "socials": {
         "instagram": "https://www.instagram.com//",
