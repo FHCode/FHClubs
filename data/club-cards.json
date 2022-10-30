@@ -1,7 +1,25 @@
 {
+    "Model United Nations": {
+        "link": "mun",
+        "thumbnail": "./img/thumbnails/mun.jpg",
+        "desc": "Spreading awareness of current events/international issues through representing countries to engage in diplomacy.",
+        "mon": false,
+        "tue": false,
+        "wed": true,
+        "thu": false,
+        "fri": false,
+        "dayOther": true,
+        "academic": false,
+        "social": false,
+        "human": true,
+        "clubTypeOther": false,
+        "lunch": false,
+        "afterSchool": false,
+        "meetingTimeOther": true
+    },
     "LEO Club": {
         "link": "leo",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/leo.jpg",
         "desc": "Service based club which helps out in the school and the community at large. Work actively with Lion's Club of Canada outside of school and on projects within the school.",
         "mon": false,
         "tue": false,
@@ -19,7 +37,7 @@
     },
     "BC Children's Hospital Club ": {
         "link": "bc_children's_hospital_",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/bch.jpg",
         "desc": "At BC Children\u2019s Hospital Club we contribute our fullest abilities to create inspiring and creative fundraising events. Our initiatives connect and inform students about raising awareness and donations for the children and families in need. Students also come together to practice leadership skills and responsibilities, while expanding their personal interests and passion.",
         "mon": false,
         "tue": false,
@@ -37,7 +55,7 @@
     },
     "Reach for the Top": {
         "link": "reach_for_the_top",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/rftt.jpg",
         "desc": "To create and prepare teams to participate in the Reach for the Top trivia competition.",
         "mon": false,
         "tue": false,
@@ -55,7 +73,7 @@
     },
     "Cultural diversity club ": {
         "link": "cultural_diversity_",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/cd.jpg",
         "desc": "To celebrate the diversity of cultures at FH to instill positive personal & cultural identity ",
         "mon": false,
         "tue": false,
@@ -73,7 +91,7 @@
     },
     "FH Helping Hands  ": {
         "link": "fh_helping_hands__",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/hh.jpg",
         "desc": "Volunteering in the school & community ",
         "mon": false,
         "tue": false,
@@ -91,7 +109,7 @@
     },
     "FH Pride club GSA ": {
         "link": "fh_pride_gsa_",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/pride.jpg",
         "desc": "To provide a space for LGBTQ community and allies to plan and discuss inclusivity ",
         "mon": false,
         "tue": false,
@@ -109,7 +127,7 @@
     },
     "Hawk Word": {
         "link": "hawk_word",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/hawkword.jpg",
         "desc": "To represent the Fraser Heights creative community in monthly newspaper issues, giving students the opportunity to share their voices and keep informed on things going on around the community. ",
         "mon": false,
         "tue": false,
@@ -127,7 +145,7 @@
     },
     "Esports Club": {
         "link": "esports",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/esports.jpg",
         "desc": "To build a community of gamers that can be free and have a comfortable place to be in.",
         "mon": false,
         "tue": false,
@@ -217,7 +235,7 @@
     },
     "Dance Club": {
         "link": "dance",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/dance.jpg",
         "desc": "To provide friendly dance lessons to people of all levels",
         "mon": false,
         "tue": false,
