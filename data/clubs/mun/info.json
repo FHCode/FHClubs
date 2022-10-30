@@ -1,0 +1,17 @@
+{
+    "title": "Model United Nations",
+    "teacher" : "Ms. Rakkar",
+    "room" : "213",
+    "carousel" : [
+      "./img/space.jpg",
+    ],
+    "purpose" : "Spreading awareness of current events/international issues through representing countries to engage in diplomacy.",
+    "typicalWeek": "Formal mock sessions of MUN, small informational lessons throughout mock sessions on core aspects of MUN speeches and structures, conference opportunities, pre-conference preparation for all delegates attending, and holiday crisis sessions.",
+    "schedule" : "We meet on Fridays after school. Come join us!",
+    "color" : "#000",
+    "socials" : {
+      "instagram" : "",
+      "discord" : "",
+      "teams" : ""
+    }
+}

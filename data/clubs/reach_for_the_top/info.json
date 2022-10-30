@@ -1,0 +1,16 @@
+{
+    "title": "Reach for the Top",
+    "teacher": "Mr. Hasan",
+    "room": "Room 103",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "To create and prepare teams to participate in the Reach for the Top trivia competition.",
+    "typicalWeek": "Practice trivia games, coaching.",
+    "schedule": "We meet on Fridays at Lunchtime. Come Join us!",
+    "socials": {
+        "instagram": "https://www.instagram.com//",
+        "discord": "",
+        "teams": ""
+    }
+}

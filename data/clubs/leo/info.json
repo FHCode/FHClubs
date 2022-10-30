@@ -1,0 +1,16 @@
+{
+    "title": "LEO Club",
+    "teacher": "Marie Currie",
+    "room": "Room 216 (Ms. Parker-Jervis' classroom)",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "Service based club which helps out in the school and the community at large. Work actively with Lion's Club of Canada outside of school and on projects within the school.",
+    "typicalWeek": "At meetings, we discuss upcoming events, fundraisers and ways to get involved.  Students also meet to help each other with a variety of activities from resume building, to interview skills to mentorship.  Also have guests come and talk to the group at large on opportunities for community service or ways to support different causes.",
+    "schedule": "We meet every other Tuesday at Lunchtime, Sometimes after school for special events. Come Join us!",
+    "socials": {
+        "instagram": "https://www.instagram.com//",
+        "discord": "",
+        "teams": ""
+    }
+}

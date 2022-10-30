@@ -22,7 +22,7 @@ with open(CSV_FILE_PATH, encoding='utf-8') as csvf:
 
         data[key]["thumbnail"] = "./data/clubs/template/img/thumbnail.png"
 
-        data[key]["desc"] = row["Describe your club in one sentence"]
+        data[key]["desc"] = row["What is the purpose of your club?"]
 
         data[key]["mon"] = False
         data[key]["tue"] = False
@@ -61,13 +61,13 @@ with open(CSV_FILE_PATH, encoding='utf-8') as csvf:
         type = row["What best describes the role of your club?"]
 
         match type:
-            case "Academic: Your club acts to help students on their academic journey.":
+            case "Academic":
                 data[key]["academic"] = True
 
-            case "Social: Your Club connects students with other students like them.":
+            case "Social":
                 data[key]["social"] = True
 
-            case "Humanitarian: Your club helps make the community a better place though aid, fundraisers, ect.":
+            case "Humanitarian":
                 data[key]["human"] = True
 
             case _:

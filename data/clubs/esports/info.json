@@ -1,0 +1,16 @@
+{
+    "title": "Esports Club",
+    "teacher": "Mr. Ho",
+    "room": "Room 204",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "To build a community of gamers that can be free and have a comfortable place to be in.",
+    "typicalWeek": "Socializing, watching gaming events, playing video games",
+    "schedule": "We meet on Fridays at After School. Come Join us!",
+    "socials": {
+        "instagram": "https://www.instagram.com//",
+        "discord": "",
+        "teams": ""
+    }
+}

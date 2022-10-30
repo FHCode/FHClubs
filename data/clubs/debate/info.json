@@ -1,0 +1,16 @@
+{
+    "title": "Debate Club",
+    "teacher": "Ms. Rakkar",
+    "room": "Room 213",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "To teach students and help them improve their speaking skills in debate on all levels.",
+    "typicalWeek": "In every meeting, the club engages its members on a variety of different activities from lessons to full on debates to help them critically expand their debating abilities and argumentation.",
+    "schedule": "We meet on Tuesdays at After School. Come Join us!",
+    "socials": {
+        "instagram": "https://www.instagram.com//",
+        "discord": "",
+        "teams": ""
+    }
+}

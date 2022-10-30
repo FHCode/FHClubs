@@ -1,0 +1,16 @@
+{
+    "title": "Dance Club",
+    "teacher": "Ms. Rakkar",
+    "room": "NLC",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "To provide friendly dance lessons to people of all levels",
+    "typicalWeek": "Dance Lessons, Games, etc.",
+    "schedule": "We meet on Wednesdays at Lunchtime. Come Join us!",
+    "socials": {
+        "instagram": "https://www.instagram.com//",
+        "discord": "",
+        "teams": ""
+    }
+}

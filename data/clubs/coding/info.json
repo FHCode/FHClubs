@@ -1,16 +1,16 @@
 {
-  "title": "Coding Club",
-  "teacher" : "Ms. Li",
-  "room" : "103",
-  "carousel" : [
-    "./img/space.jpg"
-  ],
-  "purpose" : "(A paragraph that describes the purpose of your club.)",
-  "typicalWeek": "(A paragraph that describes what happens during meetings.)", 
-  "schedule" : "some sentences that informs the meeting times",
-  "socials" : {
-    "instagram" : "https://www.instagram.com/fh_coding_club/?hl=en",
-    "discord" : "https://discord.gg/44ZtpPRn",
-    "teams" : "link"
-  }
+    "title": "Coding Club",
+    "teacher": "Mr. Hasan",
+    "room": "103",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "1. To build a community of enthusiastic programmers that help each other\n2. To teach beginners the basics of programming, so that some of them would build a passion or interest in programming\n3. To have fun by coding, by giving out candies and hosting events like kahoots, competitions, game jams, etc.\n4. To provide help with events like AP Computer Science and CCC",
+    "typicalWeek": "Normally, we would split into two small groups, junior (no experience ~ beginner) and senior (more experienced). Juniors will\nlearn the basics of programming using Java, and seniors will be given some challenges or projects to do. And for both groups, free\ncandies if you do something correctly! All throughout the meeting execs will be available for help. \nWe have bi-monthly coding competitions with awards, as well as other events.",
+    "schedule": "We meet on Tuesdays at Lunchtime. Come Join us!",
+    "socials": {
+        "instagram": "https://www.instagram.com//",
+        "discord": "",
+        "teams": ""
+    }
 }
