@@ -1,7 +1,7 @@
 {
     "LEO Club": {
         "link": "leo",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "Service based club which helps out in the school and the community at large. Work actively with Lion's Club of Canada outside of school and on projects within the school.",
         "mon": false,
         "tue": false,
@@ -19,7 +19,7 @@
     },
     "BC Children's Hospital Club ": {
         "link": "bc_children's_hospital_",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "At BC Children\u2019s Hospital Club we contribute our fullest abilities to create inspiring and creative fundraising events. Our initiatives connect and inform students about raising awareness and donations for the children and families in need. Students also come together to practice leadership skills and responsibilities, while expanding their personal interests and passion.",
         "mon": false,
         "tue": false,
@@ -37,7 +37,7 @@
     },
     "Reach for the Top": {
         "link": "reach_for_the_top",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To create and prepare teams to participate in the Reach for the Top trivia competition.",
         "mon": false,
         "tue": false,
@@ -55,7 +55,7 @@
     },
     "Cultural diversity club ": {
         "link": "cultural_diversity_",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To celebrate the diversity of cultures at FH to instill positive personal & cultural identity ",
         "mon": false,
         "tue": false,
@@ -73,7 +73,7 @@
     },
     "FH Helping Hands  ": {
         "link": "fh_helping_hands__",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "Volunteering in the school & community ",
         "mon": false,
         "tue": false,
@@ -91,7 +91,7 @@
     },
     "FH Pride club GSA ": {
         "link": "fh_pride_gsa_",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To provide a space for LGBTQ community and allies to plan and discuss inclusivity ",
         "mon": false,
         "tue": false,
@@ -109,7 +109,7 @@
     },
     "Hawk Word": {
         "link": "hawk_word",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To represent the Fraser Heights creative community in monthly newspaper issues, giving students the opportunity to share their voices and keep informed on things going on around the community. ",
         "mon": false,
         "tue": false,
@@ -127,7 +127,7 @@
     },
     "Esports Club": {
         "link": "esports",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To build a community of gamers that can be free and have a comfortable place to be in.",
         "mon": false,
         "tue": false,
@@ -145,7 +145,7 @@
     },
     "International Ambassadors Club": {
         "link": "international_ambassadors",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "The International Ambassador Club is dedicated to promoting cultural understanding and equality amongst our large International Student population at Fraser Heights Secondary. The International Ambassador\u2019s hold monthly meetings and accept all students in its membership. The Ambassador\u2019s work with new and returning International Students to develop community and a sense of belonging in our school and in the community at large. The International Ambassador Club is an avenue to foster strong relationships with peers and staff and share in cultural celebrations. ",
         "mon": true,
         "tue": false,
@@ -163,7 +163,7 @@
     },
     "Coding Club": {
         "link": "coding",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "1. To build a community of enthusiastic programmers that help each other\n2. To teach beginners the basics of programming, so that some of them would build a passion or interest in programming\n3. To have fun by coding, by giving out candies and hosting events like kahoots, competitions, game jams, etc.\n4. To provide help with events like AP Computer Science and CCC",
         "mon": false,
         "tue": true,
@@ -181,7 +181,7 @@
     },
     "Mock Trials": {
         "link": "mock_trials",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To educate students on legal proceedings, while practicing public speaking by preparing mock cases.",
         "mon": true,
         "tue": false,
@@ -199,7 +199,7 @@
     },
     "Debate Club": {
         "link": "debate",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To teach students and help them improve their speaking skills in debate on all levels.",
         "mon": false,
         "tue": true,
@@ -217,7 +217,7 @@
     },
     "Dance Club": {
         "link": "dance",
-        "thumbnail": "./data/clubs/template/img/thumbnail.png",
+        "thumbnail": "./img/space.jpg",
         "desc": "To provide friendly dance lessons to people of all levels",
         "mon": false,
         "tue": false,
