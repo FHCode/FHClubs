@@ -7,6 +7,8 @@
     ],
     "purpose": "1. To build a community of enthusiastic programmers that help each other\n2. To teach beginners the basics of programming, so that some of them would build a passion or interest in programming\n3. To have fun by coding, by giving out candies and hosting events like kahoots, competitions, game jams, etc.\n4. To provide help with events like AP Computer Science and CCC",
     "typicalWeek": "Normally, we would split into two small groups, junior (no experience ~ beginner) and senior (more experienced). Juniors will\nlearn the basics of programming using Java, and seniors will be given some challenges or projects to do. And for both groups, free\ncandies if you do something correctly! All throughout the meeting execs will be available for help. \nWe have bi-monthly coding competitions with awards, as well as other events.",
+    "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
     "schedule": "We meet on Tuesdays at Lunchtime. Come Join us!",
     "socials": {
         "instagram": "https://www.instagram.com//",

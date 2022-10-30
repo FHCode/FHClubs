@@ -7,6 +7,8 @@
     ],
     "purpose": "To provide friendly dance lessons to people of all levels",
     "typicalWeek": "Dance Lessons, Games, etc.",
+    "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
     "schedule": "We meet on Fridays at Lunchtime. Come Join us!",
     "socials": {
         "instagram": "https://www.instagram.com//",

@@ -7,6 +7,8 @@
     ],
     "purpose": "At BC Children\u2019s Hospital Club we contribute our fullest abilities to create inspiring and creative fundraising events. Our initiatives connect and inform students about raising awareness and donations for the children and families in need. Students also come together to practice leadership skills and responsibilities, while expanding their personal interests and passion.",
     "typicalWeek": "Class brainstorming sessions, separate executive meetings, club games and activities, poster painting and etc.",
+    "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
     "schedule": "We meet on Wednesdays at Lunchtime. Come Join us!",
     "socials": {
         "instagram": "https://www.instagram.com//",
