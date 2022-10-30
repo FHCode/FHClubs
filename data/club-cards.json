@@ -181,7 +181,7 @@
     },
     "Coding Club": {
         "link": "coding",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/coding.jpg",
         "desc": "1. To build a community of enthusiastic programmers that help each other\n2. To teach beginners the basics of programming, so that some of them would build a passion or interest in programming\n3. To have fun by coding, by giving out candies and hosting events like kahoots, competitions, game jams, etc.\n4. To provide help with events like AP Computer Science and CCC",
         "mon": false,
         "tue": true,
