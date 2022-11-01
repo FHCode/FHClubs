@@ -1,7 +1,7 @@
 {
     "title": "LEO Club",
-    "teacher": "Marie Currie",
-    "room": "Room 216 (Ms. Parker-Jervis' classroom)",
+    "teacher": "Ms. Parker-Jervis",
+    "room": "216",
     "carousel": [
         "./img/space.jpg"
     ],
