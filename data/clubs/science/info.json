@@ -1,0 +1,18 @@
+{
+    "title": "Science Club",
+    "teacher": "Mr. Struik",
+    "room": "D101",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "To inspire and teach students the priciples of science and compete in regional and national science competitions",
+    "typicalWeek": "During a typicaly meeting, we may discuss important scientific concepts, do fun activies and trivia questions, or prepare for competitions.",
+    "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
+    "schedule": "We meet on Tuesdays at Lunchtime. Come Join us!",
+    "socials": {
+        "instagram": "https://www.instagram.com/fh_science_club/",
+        "discord": "https://discord.gg/5nxUMSnZPg",
+        "teams": ""
+    }
+}
