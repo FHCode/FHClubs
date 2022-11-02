@@ -250,5 +250,23 @@
         "lunch": true,
         "afterSchool": false,
         "meetingTimeOther": false
+    },
+    "Science Club": {
+        "link": "science",
+        "thumbnail": "./img/thumbnails/science.jpg",
+        "desc": "To inspire and educate youth on the principles of scientific thinking.",
+        "mon": false,
+        "tue": false,
+        "wed": true,
+        "thu": false,
+        "fri": false,
+        "dayOther": false,
+        "academic": true,
+        "social": false,
+        "human": false,
+        "clubTypeOther": false,
+        "lunch": false,
+        "afterSchool": true,
+        "meetingTimeOther": false
     }
 }
