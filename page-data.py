@@ -28,7 +28,7 @@ with open(CSV_FILE_PATH, encoding='utf-8') as csvf:
 
         socials = {}
 
-        socials["instagram"] = f"https://www.instagram.com/{row['Instagram Tag']}/"
+        socials["instagram"] = row["Instagram Tag"]
         socials["discord"] = row["Discord Server Link"]
         socials["teams"] = row["Teams Link"]
 
