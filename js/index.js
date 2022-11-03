@@ -158,10 +158,9 @@ const newCard = (club) => {
     `<div class="card-hover">
       <a href="./club.html?q=${clubData.link}" class="no-url-effects">
         <div class="card mb-4 box-shadow">
-          <!-- <div class="card-img"></div> -->
           <img class="card-img" src="${clubData.thumbnail}" alt="-">
           <div class="card-body">
-            <h4 class="club-title title-crop">${club}</h4>
+            <h4 class="club-title">${club}</h4>
             <p class="club-text text-muted text-crop">${clubData.desc}</p>
           </div>
         </div>
