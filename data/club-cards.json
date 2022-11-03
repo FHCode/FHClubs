@@ -35,7 +35,7 @@
         "afterSchool": false,
         "meetingTimeOther": false
     },
-    "Cultural diversity club ": {
+    "Cultural Diversity Club ": {
         "link": "cultural_diversity_",
         "thumbnail": "./img/thumbnails/cd.jpg",
         "desc": "To celebrate the diversity of cultures at FH to instill positive personal & cultural identity ",
@@ -125,7 +125,7 @@
         "afterSchool": false,
         "meetingTimeOther": true
     },
-    "FH Pride club GSA ": {
+    "FH Pride Club GSA ": {
         "link": "fh_pride_gsa_",
         "thumbnail": "./img/thumbnails/pride.jpg",
         "desc": "To provide a space for LGBTQ community and allies to plan and discuss inclusivity ",
