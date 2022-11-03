@@ -95,8 +95,8 @@ const loadClubInfo = (data) => {
   $("#car-indicator-cont").html(generateCarouselIndicators(data.carousel));
   $("#purpose-para").text(data.purpose);
   $("#typical-para").text(data.typicalWeek);
-  $("#purpose-img").html(`<img src="${data.purposeImg}" class="img-fluid" alt="-">`);
-  $("#meeting-img").html(`<img src="${data.meetingImg}" class="img-fluid" alt="-">`);
+  $("#purpose-img").html(`<img src="${data.purposeImg}" class="img-fluid rounded" alt="-">`);
+  $("#meeting-img").html(`<img src="${data.meetingImg}" class="img-fluid rounded" alt="-">`);
 
   if(data.carousel.length > 1) {
     $(".carousel-control-prev").removeClass("visually-hidden");
