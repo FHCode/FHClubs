@@ -28,9 +28,9 @@ with open(CSV_FILE_PATH, encoding='utf-8') as csvf:
 
         socials = {}
 
-        socials["instagram"] = row["Instagram Tag"]
-        socials["discord"] = row["Discord Server Link"]
-        socials["teams"] = row["Teams Link"]
+        socials["instagram"] = ""
+        socials["discord"] = ""
+        socials["teams"] = ""
 
         data["socials"] = socials
 
