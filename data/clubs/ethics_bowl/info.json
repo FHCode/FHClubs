@@ -1,0 +1,18 @@
+{
+    "title": "Ethics Bowl ",
+    "teacher": "Ms. Balikis ",
+    "room": "Room 215 ",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "Holding competitive and collaborative team discussions where students analyze, criticize, and compare ethical dilemmas. This provides students the opportunity to think critically, apply their knowledge in the real world, and deepen their awareness of ethical values. ",
+    "typicalWeek": "In a typical Ethics Bowl meeting, students discuss and analyze case studies that involve political, social, or economic dilemmas. Students practice their public speaking and critical thinking skills by splitting up into two teams and proposing solutions to ethical issues. Coaches also train students on philosophical perspectives and speaking strategies, preparing them for upcoming competitions",
+    "schedule": "We meet on Tuesday;Thursdays at After School. Come Join us!",
+    "purposeImg": "./data/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/placeholder/img/meeting.jpg",
+    "socials": {
+        "instagram": "",
+        "discord": "",
+        "teams": ""
+    }
+}

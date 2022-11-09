@@ -1,6 +1,6 @@
 {
     "BC Children's Hospital Club ": {
-        "link": "bc_children's_hospital_",
+        "link": "bc_children's_hospital",
         "thumbnail": "./img/thumbnails/bch.jpg",
         "desc": "At BC Children\u2019s Hospital Club we contribute our fullest abilities to create inspiring and creative fundraising events. Our initiatives connect and inform students about raising awareness and donations for the children and families in need. Students also come together to practice leadership skills and responsibilities, while expanding their personal interests and passion.",
         "mon": false,
@@ -13,6 +13,24 @@
         "social": false,
         "human": false,
         "clubTypeOther": true,
+        "lunch": true,
+        "afterSchool": false,
+        "meetingTimeOther": false
+    },
+    "Chess Club": {
+        "link": "chess",
+        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "desc": "To provide a social, informative, and fun environment for students to learn and play the game of chess and compete in spirited competitions.",
+        "mon": false,
+        "tue": false,
+        "wed": false,
+        "thu": false,
+        "fri": true,
+        "dayOther": false,
+        "academic": true,
+        "social": false,
+        "human": false,
+        "clubTypeOther": false,
         "lunch": true,
         "afterSchool": false,
         "meetingTimeOther": false
@@ -36,7 +54,7 @@
         "meetingTimeOther": false
     },
     "Cultural Diversity Club ": {
-        "link": "cultural_diversity_",
+        "link": "cultural_diversity",
         "thumbnail": "./img/thumbnails/cd.jpg",
         "desc": "To celebrate the diversity of cultures at FH to instill positive personal & cultural identity ",
         "mon": false,
@@ -107,8 +125,44 @@
         "afterSchool": true,
         "meetingTimeOther": false
     },
+    "Ethics Bowl ": {
+        "link": "ethics_bowl",
+        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "desc": "Holding competitive and collaborative team discussions where students analyze, criticize, and compare ethical dilemmas. This provides students the opportunity to think critically, apply their knowledge in the real world, and deepen their awareness of ethical values. ",
+        "mon": false,
+        "tue": false,
+        "wed": false,
+        "thu": false,
+        "fri": false,
+        "dayOther": true,
+        "academic": true,
+        "social": false,
+        "human": false,
+        "clubTypeOther": false,
+        "lunch": false,
+        "afterSchool": true,
+        "meetingTimeOther": false
+    },
+    "FH Environment Club": {
+        "link": "fh_environment",
+        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "desc": "To obtain a sustainable lifestyle and combat climate change through individual actions. ",
+        "mon": false,
+        "tue": false,
+        "wed": false,
+        "thu": true,
+        "fri": false,
+        "dayOther": false,
+        "academic": false,
+        "social": true,
+        "human": false,
+        "clubTypeOther": false,
+        "lunch": true,
+        "afterSchool": false,
+        "meetingTimeOther": false
+    },
     "FH Helping Hands  ": {
-        "link": "fh_helping_hands__",
+        "link": "fh_helping_hands",
         "thumbnail": "./img/thumbnails/hh.jpg",
         "desc": "Volunteering in the school & community ",
         "mon": false,
@@ -126,7 +180,7 @@
         "meetingTimeOther": true
     },
     "FH Pride Club GSA ": {
-        "link": "fh_pride_gsa_",
+        "link": "fh_pride_gsa",
         "thumbnail": "./img/thumbnails/pride.jpg",
         "desc": "To provide a space for LGBTQ community and allies to plan and discuss inclusivity ",
         "mon": false,
@@ -157,6 +211,24 @@
         "social": false,
         "human": false,
         "clubTypeOther": true,
+        "lunch": true,
+        "afterSchool": false,
+        "meetingTimeOther": false
+    },
+    "Homework Club": {
+        "link": "homework",
+        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "desc": "Homework club is run by a group of Fraser Heights Students who are eager to help out students in various subjects. This club is great for students who'd like extra help on assignments from a knowledgeable peer. It\u2019s a welcoming and warm environment that\u2019s enjoyable for students.",
+        "mon": false,
+        "tue": false,
+        "wed": false,
+        "thu": false,
+        "fri": false,
+        "dayOther": true,
+        "academic": true,
+        "social": false,
+        "human": false,
+        "clubTypeOther": false,
         "lunch": true,
         "afterSchool": false,
         "meetingTimeOther": false
@@ -267,6 +339,24 @@
         "clubTypeOther": false,
         "lunch": false,
         "afterSchool": true,
+        "meetingTimeOther": false
+    },
+    "Student Council": {
+        "link": "student_council",
+        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "desc": "We create a space that allows students to have a chance to lead and collaborate to further build a positive school environment and culture. We promote positive school activities and host fun spirit events! We promote spirit within the school.",
+        "mon": false,
+        "tue": true,
+        "wed": false,
+        "thu": false,
+        "fri": false,
+        "dayOther": false,
+        "academic": false,
+        "social": false,
+        "human": false,
+        "clubTypeOther": true,
+        "lunch": true,
+        "afterSchool": false,
         "meetingTimeOther": false
     }
 }

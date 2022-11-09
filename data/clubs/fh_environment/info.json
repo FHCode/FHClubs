@@ -1,0 +1,18 @@
+{
+    "title": "FH Environment Club",
+    "teacher": "Ms. Sereda",
+    "room": "Room 203",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "To obtain a sustainable lifestyle and combat climate change through individual actions. ",
+    "typicalWeek": "Battery challenge, pens and markers collection, litter pickups",
+    "schedule": "We meet on Thursdays at Lunchtime. Come Join us!",
+    "purposeImg": "./data/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/placeholder/img/meeting.jpg",
+    "socials": {
+        "instagram": "",
+        "discord": "",
+        "teams": ""
+    }
+}
