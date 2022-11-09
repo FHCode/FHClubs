@@ -23,8 +23,8 @@ with open(CSV_FILE_PATH, encoding='utf-8') as csvf:
         data["purpose"] = row["What is the purpose of your club?"]
         data["typicalWeek"] = row["What are some activities that take place during a typical meeting?"]
         data["schedule"] = f"We meet on {row['Meeting Day']}s at {row['Meeting Time']}. Come Join us!"
-        data["purposeImg"] = "./data/placeholder/img/purpose.jpg"
-        data["meetingImg"] = "./data/placeholder/img/meeting.jpg"
+        data["purposeImg"] = "./data/clubs/placeholder/img/purpose.jpg"
+        data["meetingImg"] = "./data/clubs/placeholder/img/meeting.jpg"
 
         socials = {}
 

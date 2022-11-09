@@ -19,7 +19,7 @@
     },
     "Chess Club": {
         "link": "chess",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/chess.jpg",
         "desc": "To provide a social, informative, and fun environment for students to learn and play the game of chess and compete in spirited competitions.",
         "mon": false,
         "tue": false,
@@ -127,7 +127,7 @@
     },
     "Ethics Bowl ": {
         "link": "ethics_bowl",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/eb.jpg",
         "desc": "Holding competitive and collaborative team discussions where students analyze, criticize, and compare ethical dilemmas. This provides students the opportunity to think critically, apply their knowledge in the real world, and deepen their awareness of ethical values. ",
         "mon": false,
         "tue": false,
@@ -145,7 +145,7 @@
     },
     "FH Environment Club": {
         "link": "fh_environment",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/enviro.jpg",
         "desc": "To obtain a sustainable lifestyle and combat climate change through individual actions. ",
         "mon": false,
         "tue": false,
@@ -217,7 +217,7 @@
     },
     "Homework Club": {
         "link": "homework",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/hw.jpg",
         "desc": "Homework club is run by a group of Fraser Heights Students who are eager to help out students in various subjects. This club is great for students who'd like extra help on assignments from a knowledgeable peer. It\u2019s a welcoming and warm environment that\u2019s enjoyable for students.",
         "mon": false,
         "tue": false,
@@ -343,7 +343,7 @@
     },
     "Student Council": {
         "link": "student_council",
-        "thumbnail": "./img/thumbnails/placeholder.jpg",
+        "thumbnail": "./img/thumbnails/stuco.jpg",
         "desc": "We create a space that allows students to have a chance to lead and collaborate to further build a positive school environment and culture. We promote positive school activities and host fun spirit events! We promote spirit within the school.",
         "mon": false,
         "tue": true,
