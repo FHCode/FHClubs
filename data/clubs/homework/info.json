@@ -1,13 +1,13 @@
 {
     "title": "Homework Club",
     "teacher": "Amy Grewal",
-    "room": "10",
+    "room": "Room 210",
     "carousel": [
         "./img/space.jpg"
     ],
     "purpose": "Homework club is run by a group of Fraser Heights Students who are eager to help out students in various subjects. This club is great for students who'd like extra help on assignments from a knowledgeable peer. It\u2019s a welcoming and warm environment that\u2019s enjoyable for students.",
     "typicalWeek": "Students create posters, discuss how to spread the word about the club, and most importantly assist peers with their assignments",
-    "schedule": "We meet on Monday;Tuesday;Thursdays at Lunchtime. Come Join us!",
+    "schedule": "We meet on Monday, Tuesday, and Thursdays at Lunchtime. Come Join us!",
     "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
     "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
     "socials": {
