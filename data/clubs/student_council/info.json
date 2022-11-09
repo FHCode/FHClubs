@@ -1,7 +1,7 @@
 {
     "title": "Student Council",
     "teacher": "Mrs. Brar, Ms. Gonsales, Ms. Wong",
-    "room": "Mrs. Brars room D105",
+    "room": "D105",
     "carousel": [
         "./data/clubs/student_council/1.jpg",
         "./data/clubs/student_council/2.jpg",
