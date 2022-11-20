@@ -1,0 +1,18 @@
+{
+    "title": "FH Red Cross",
+    "teacher": "Ms. Balikis",
+    "room": "Portable 6",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "To spread awareness on current events and global issues while advocating for people in need through fundraisers and humanitarian aid.\n ",
+    "typicalWeek": "- Current events presentations\n- Fundraiser logistics planning\n- Initiative brainstorming/execution",
+    "schedule": "We meet on Thursdays at Lunchtime. Come Join us!",
+    "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
+    "socials": {
+        "instagram": "",
+        "discord": "",
+        "teams": ""
+    }
+}

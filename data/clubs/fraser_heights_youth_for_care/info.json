@@ -1,0 +1,18 @@
+{
+    "title": "Fraser Heights Youth for Care",
+    "teacher": "Mrs. Brar",
+    "room": "Mrs. Brar's classroom",
+    "carousel": [
+        "./img/space.jpg"
+    ],
+    "purpose": "We are the Fraser Heights Youth for Care Club! A group of friendly people who are interested in nothing but giving back to our beautiful community.We are associated with the Surrey Memorial Hospital and the Surrey Memorial Hospital Foundation. We give back by fundraising for them, making care packages for the children staying in the hospital and we give our own members insight on the healthcare and medical field by bringing in healthcare professionals to do Doctor Talks!",
+    "typicalWeek": "We are focused on helping the youth of our school and other people in any way we can through fundraising activities. We also are focused on the medicinal field and provide \u201cdoctor talks\u201d to students in order to give them an insight into the real world and how there is a large variety of healthcare professionals. In their talks, they give you tips and tricks to follow in their footsteps and what to prepare for if you are interested in pursuing a career in the healthcare/medical field.",
+    "schedule": "We meet on Mondays at Lunchtime. Come Join us!",
+    "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
+    "socials": {
+        "instagram": "",
+        "discord": "",
+        "teams": ""
+    }
+}
