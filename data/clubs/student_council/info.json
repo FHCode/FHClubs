@@ -3,10 +3,10 @@
     "teacher": "Mrs. Brar, Ms. Gonsales, Ms. Wong",
     "room": "D105",
     "carousel": [
-        "./data/clubs/student_council/1.jpg",
-        "./data/clubs/student_council/2.jpg",
-        "./data/clubs/student_council/3.jpg",
-        "./data/clubs/student_council/4.jpg"
+        "./data/clubs/student_council/img/1.jpg",
+        "./data/clubs/student_council/img/2.jpg",
+        "./data/clubs/student_council/img/3.jpg",
+        "./data/clubs/student_council/img/4.jpg"
     ],
     "purpose": "We create a space that allows students to have a chance to lead and collaborate to further build a positive school environment and culture. We promote positive school activities and host fun spirit events! We promote spirit within the school.",
     "typicalWeek": "Every week theres something new! We brainstorm, plan, and organize school spirit events. We work as a team to create a fun and enthusiastic school environment by sharing ideas with with the team. We turn ideas into actions! ",

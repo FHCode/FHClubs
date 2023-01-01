@@ -1,0 +1,21 @@
+{
+    "title": "Anime Club",
+    "teacher": "Mr. Ho",
+    "room": "Room 204",
+    "carousel": [
+      "./data/clubs/anime/img/1.jpg",
+      "./data/clubs/anime/img/2.jpg",
+      "./data/clubs/anime/img/3.jpg",
+      "./data/clubs/anime/img/4.jpg"
+    ],
+    "purpose": "The purpose of the FHSS Anime club is to promote and improve the communication skills between students of any grades using Japanese pop culture as a foundation, as well as the building of long lasting memories and connections. Society is built on social engagement, so we strive to increase the availability of such events.",
+    "typicalWeek": "Weekly meetings are on Wednesdays from 3:00pm - 4:30pm. Each meeting will start by watching 2 or 3 episodes from an anime that the club members voted on at the beginning of each semester. After, we would play some games including; Jackbox, Garticphone, and other fun activities.",
+    "schedule": "We meet on Wednesdays at After School. Come Join us!",
+    "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
+    "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
+    "socials": {
+        "instagram": "",
+        "discord": "",
+        "teams": ""
+    }
+}
