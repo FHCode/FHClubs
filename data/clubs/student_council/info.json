@@ -14,7 +14,7 @@
     "purposeImg": "./data/clubs/placeholder/img/purpose.jpg",
     "meetingImg": "./data/clubs/placeholder/img/meeting.jpg",
     "socials": {
-        "instagram": "",
+        "instagram": "https://www.instagram.com/fhstuco/",
         "discord": "",
         "teams": ""
     }
