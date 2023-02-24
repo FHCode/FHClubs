@@ -154,19 +154,24 @@ const newCard = (club) => {
     card.classList.add("col-lg-4", "col-md-6", "club-card","hidden");
 
     // add thumbnail
-    card.innerHTML =
-    `<div class="card-hover">
-      <a href="./club.html?q=${clubData.link}" class="no-url-effects">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img" src="${clubData.thumbnail}" alt="-">
-          <div class="card-body">
-            <h4 class="club-title">${club}</h4>
-            <p class="club-text text-muted text-crop">${clubData.desc}</p>
-          </div>
-        </div>
-      </a>
+    card.innerHTML = `<div class="card-hover">
+        <a href="./club.html?q=${clubData.link}" class="no-url-effects">
+            <div class="card mb-4 box-shadow-light">
+                <div class="thumbnail-placeholder-outer">
+                    <div class="thumbnail-placeholder"></div>
+                </div>
+                <div class="card-body">
+                    <h4 class="club-title title-crop">${club}</h4>
+                    <p class="club-text text-muted text-crop"> ${clubData.desc}</p>
+                </div>
+            </div>
+        </a>
     </div>`;
 
+    const imgDiv = card.getElementsByClassName("thumbnail-placeholder")[0];
+
+    $(imgDiv).css("background-image", `url(${clubData.thumbnail})`);
+    
     return card;
 }
 

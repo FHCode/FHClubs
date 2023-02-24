@@ -60,6 +60,8 @@
   padding-top: 56.25%; /* makes thumbnails 16:9 ratio*/
   background-color: #aaa;
   background-size: 100%;
+  background-position: center;
+
 }
 
 
